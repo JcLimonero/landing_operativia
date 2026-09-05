@@ -13,6 +13,10 @@
     {
       "source": "/mentoria-ia",
       "destination": "/OperativAI Mentoria IA.dc.html"
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/privacidad.html"
     }
   ],
   "redirects": [
@@ -29,6 +33,11 @@
     {
       "source": "/OperativAI Mentoria IA.dc.html",
       "destination": "/mentoria-ia",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad.html",
+      "destination": "/privacidad",
       "permanent": true
     }
   ]

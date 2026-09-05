@@ -127,6 +127,14 @@
     .stagger > *:nth-child(2) { transition-delay: 60ms; }
     .stagger > *:nth-child(3) { transition-delay: 120ms; }
     .card-link { transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .consent { display:flex; align-items:flex-start; gap:10px; font-size:13px; line-height:1.5; color:var(--fg-muted); }
+    .consent input { margin-top:2px; width:16px; height:16px; flex-shrink:0; accent-color:var(--brand-500); }
+    @media (max-width: 700px) {
+      /* La barra cabe en una sola fila: logo + CTA */
+      .nav-link { display: none; }
+      header > div { padding-left: 16px !important; padding-right: 16px !important; gap: 12px !important; }
+    }
     @media (prefers-reduced-motion: reduce) {
       .reveal, .stagger > * { transition: opacity var(--dur-slow) linear !important; transform: none !important; }
     }
@@ -141,9 +149,9 @@
         <span style="font-weight:700;font-size:18px;letter-spacing:-0.01em;color:var(--fg);">OperativAI</span>
       </a>
       <nav aria-label="Principal" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
-        <a href="/agente-whatsapp" style="color:var(--fg);font-size:15px;font-weight:500;">Agente WhatsApp</a>
-        <a href="/mentoria-ia" style="color:var(--fg);font-size:15px;font-weight:500;">Mentoría IA</a>
-        <a href="#faq" style="color:var(--fg);font-size:15px;font-weight:500;">Preguntas</a>
+        <a href="/agente-whatsapp" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Agente WhatsApp</a>
+        <a href="/mentoria-ia" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Mentoría IA</a>
+        <a href="#faq" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Preguntas</a>
         <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink-900);color:var(--ink-0);padding:12px 20px;font-size:14px;font-weight:600;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión</a>
       </nav>
     </div>
@@ -275,22 +283,28 @@
         </div>
         <form onSubmit="{{ handleSubmit }}" style="background:var(--ink-0);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);padding:clamp(28px,3vw,36px);display:flex;flex-direction:column;gap:14px;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-            <input class="form-input" name="nombre" type="text" placeholder="Nombre" required="true">
-            <input class="form-input" name="cargo" type="text" placeholder="Cargo">
+            <label class="sr-only" for="f-nombre">Nombre</label><input class="form-input" id="f-nombre" name="nombre" type="text" placeholder="Nombre" autocomplete="name" required="true">
+            <label class="sr-only" for="f-cargo">Cargo</label><input class="form-input" id="f-cargo" name="cargo" type="text" placeholder="Cargo" autocomplete="organization-title">
           </div>
-          <input class="form-input" name="empresa" type="text" placeholder="Empresa" required="true">
+          <label class="sr-only" for="f-empresa">Empresa</label><input class="form-input" id="f-empresa" name="empresa" type="text" placeholder="Empresa" autocomplete="organization">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-            <input class="form-input" name="email" type="email" placeholder="Email" required="true">
-            <input class="form-input" name="telefono" type="tel" placeholder="Teléfono" required="true">
+            <label class="sr-only" for="f-email">Email</label><input class="form-input" id="f-email" name="email" type="email" placeholder="Email" autocomplete="email" required="true">
+            <label class="sr-only" for="f-telefono">Teléfono</label><input class="form-input" id="f-telefono" name="telefono" type="tel" placeholder="Teléfono" autocomplete="tel" required="true">
           </div>
-          <select class="form-input" name="area_interes" required="true">
+          <label class="sr-only" for="f-area">¿Qué te interesa?</label>
+          <select class="form-input" id="f-area" name="area_interes">
             <option value="">¿Qué te interesa?</option>
             <option value="Agente de IA para WhatsApp">Agente de IA para WhatsApp</option>
             <option value="Mentoría de IA para pymes">Mentoría de IA para pymes</option>
             <option value="Ambos">Ambos</option>
           </select>
-          <textarea class="form-input" name="comentarios" placeholder="Cuéntanos brevemente qué necesitas" rows="3" style="resize:vertical;"></textarea>
+          <label class="sr-only" for="f-comentarios">Comentarios</label>
+          <textarea class="form-input" id="f-comentarios" name="comentarios" placeholder="Cuéntanos brevemente qué necesitas" rows="3" style="resize:vertical;"></textarea>
           <input type="hidden" name="fecha_preferida" value="Por definir">
+          <label class="consent">
+            <input type="checkbox" name="consentimiento" value="Sí" required="true">
+            <span>Acepto el <a href="/privacidad" style="text-decoration:underline;">aviso de privacidad</a> y que me contacten sobre mi solicitud.</span>
+          </label>
           <button type="submit" disabled="{{ isSending }}" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;background:var(--ink-900);color:var(--ink-0);font-weight:600;font-size:15px;border:1px solid var(--ink-900);border-radius:var(--r-md);cursor:pointer;" style-hover="background:var(--brand-500);border-color:var(--brand-500);">{{ submitLabel }}</button>
           <sc-if value="{{ isSent }}" hint-placeholder-val="{{ false }}">
             <div style="color:var(--success);font-size:13px;font-weight:500;">✓ Enviado — te contactamos pronto.</div>
@@ -326,8 +340,8 @@
           <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--fg-soft);margin-bottom:16px;">Empresa</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
             <a href="{{ ctaUrl }}" style="color:var(--fg-muted);font-size:14px;">Agendar reunión</a>
-            <a href="mailto:ventas1@zeutica.com,gerencia.choice@gmail.com,carlos.limon@nexusqtech.com" style="color:var(--fg-muted);font-size:14px;">Contacto</a>
-            <a href="#" style="color:var(--fg-muted);font-size:14px;">Seguridad</a>
+            <a href="#demo" style="color:var(--fg-muted);font-size:14px;">Contacto</a>
+            <a href="/privacidad" style="color:var(--fg-muted);font-size:14px;">Aviso de privacidad</a>
           </div>
         </div>
       </div>
