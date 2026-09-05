@@ -2,8 +2,34 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/OperativAI Landing.dc.html" },
-    { "source": "/agente-whatsapp", "destination": "/OperativAI Agente WhatsApp.dc.html" },
-    { "source": "/mentoria-ia", "destination": "/OperativAI Mentoria IA.dc.html" }
+    {
+      "source": "/",
+      "destination": "/OperativAI Landing.dc.html"
+    },
+    {
+      "source": "/agente-whatsapp",
+      "destination": "/OperativAI Agente WhatsApp.dc.html"
+    },
+    {
+      "source": "/mentoria-ia",
+      "destination": "/OperativAI Mentoria IA.dc.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/OperativAI Landing.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/OperativAI Agente WhatsApp.dc.html",
+      "destination": "/agente-whatsapp",
+      "permanent": true
+    },
+    {
+      "source": "/OperativAI Mentoria IA.dc.html",
+      "destination": "/mentoria-ia",
+      "permanent": true
+    }
   ]
 }

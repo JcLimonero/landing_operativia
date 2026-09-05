@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Los artboards del canvas duplican las rutas limpias
+Disallow: /*.dc.html$
+Disallow: /_ds/
+Disallow: /uploads/
+
+Sitemap: https://www.operativai.com.mx/sitemap.xml
