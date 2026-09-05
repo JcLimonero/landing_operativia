@@ -1,0 +1,214 @@
+/* =========================================================================
+   Dealer Solutions — Design Tokens
+   LIGHT corporate aesthetic: grays + blues, professional/sober.
+   Inspired by editorial-swiss layouts (McKinsey, Stripe-classic, Pentagram).
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- BRAND (corporate blue) ---------- */
+  --brand-50:  #EFF4FB;
+  --brand-100: #D6E2F2;
+  --brand-200: #B0C7E6;
+  --brand-300: #82A8D5;
+  --brand-400: #4F86C4;
+  --brand-500: #1E5BB8;   /* ★ canonical corporate blue */
+  --brand-600: #18488F;
+  --brand-700: #0E3C82;   /* deep navy */
+  --brand-800: #082A5E;
+  --brand-900: #041938;
+
+  /* Logo blue is preserved for the logo itself only */
+  --logo-blue: #4090D0;
+
+  /* ---------- ACCENTS (cool only — no warm tones) ---------- */
+  --accent-light:  #8FB4E8;  /* light blue, for "spotlight" elements on navy */
+  --accent-soft:   #D6E2F2;  /* subtle backgrounds */
+
+  /* ---------- NEUTRALS (cool gray-blue scale) ---------- */
+  --ink-0:    #FFFFFF;
+  --ink-50:   #F8FAFC;
+  --ink-100:  #F4F6F9;   /* page background */
+  --ink-200:  #ECEFF4;   /* alt section background */
+  --ink-300:  #DDE3EC;   /* card / tile surface */
+  --ink-400:  #C2CAD7;
+  --ink-500:  #8E97A8;
+  --ink-600:  #6B7689;
+  --ink-700:  #3C4759;
+  --ink-800:  #1F2737;
+  --ink-900:  #0B1220;   /* near-black navy */
+
+  /* ---------- SEMANTIC SURFACES (light mode) ---------- */
+  --bg:         var(--ink-100);
+  --bg-elev-1:  var(--ink-50);
+  --bg-elev-2:  #FFFFFF;        /* default card surface */
+  --bg-elev-3:  var(--ink-200); /* hover / pressed cards */
+  --bg-glass:   rgba(255,255,255,0.75);
+  --bg-dark:    var(--brand-700); /* for inverted sections */
+
+  --fg:         var(--ink-900);
+  --fg-muted:   var(--ink-700);
+  --fg-soft:    var(--ink-600);
+  --fg-faint:   var(--ink-500);
+  --fg-inverse: var(--ink-0);
+
+  --border:        rgba(11,18,32,0.10);
+  --border-strong: rgba(11,18,32,0.18);
+  --border-brand:  rgba(30,91,184,0.35);
+
+  /* ---------- STATUS (muted, B2B-friendly) ---------- */
+  --success: #4A8B7A;
+  --warning: #B88842;
+  --danger:  #A84F4F;
+  --info:    var(--brand-500);
+
+  /* ---------- GRADIENTS (used sparingly) ---------- */
+  --grad-brand:    linear-gradient(135deg, var(--brand-500) 0%, var(--brand-700) 100%);
+  --grad-soft:     linear-gradient(180deg, var(--brand-50) 0%, transparent 100%);
+  --grad-card:     linear-gradient(180deg, rgba(30,91,184,0.03) 0%, rgba(30,91,184,0) 100%);
+
+  /* ---------- TYPOGRAPHY — Geist (Vercel) ---------- */
+  --font-display: 'Geist', system-ui, sans-serif;
+  --font-body:    'Geist', system-ui, sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, monospace;
+
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-base: 16px;
+  --fs-md:   18px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  44px;
+  --fs-4xl:  60px;
+  --fs-5xl:  88px;
+  --fs-6xl:  140px;
+
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-normal: 1.5;
+  --lh-loose:  1.7;
+
+  --tracking-tight: -0.035em;
+  --tracking-snug:  -0.02em;
+  --tracking-wide:  0.1em;
+
+  /* ---------- SPACING (4-pt) ---------- */
+  --sp-0: 0;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+  --sp-32: 128px;
+
+  /* ---------- RADIUS (editorial = mostly sharp) ---------- */
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 14px;
+  --r-2xl: 20px;
+  --r-pill: 999px;
+
+  /* ---------- ELEVATION (subtle, no glows in light mode) ---------- */
+  --shadow-sm:  0 1px 2px rgba(11,18,32,0.06);
+  --shadow-md:  0 4px 16px rgba(11,18,32,0.08), 0 1px 2px rgba(11,18,32,0.04);
+  --shadow-lg:  0 12px 32px rgba(11,18,32,0.10), 0 2px 6px rgba(11,18,32,0.06);
+  --shadow-xl:  0 24px 64px rgba(11,18,32,0.14), 0 4px 12px rgba(11,18,32,0.08);
+  --shadow-flat: 0 2px 0 var(--ink-900);  /* editorial hard-shadow */
+  --ring-brand: 0 0 0 3px rgba(30,91,184,0.18);
+
+  /* ---------- MOTION ---------- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   420ms;
+}
+
+/* =========================================================================
+   SEMANTIC TYPE
+   ========================================================================= */
+body {
+  font-family: var(--font-body);
+  color: var(--fg);
+  background: var(--bg);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display-1, h1.hero {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, var(--fs-6xl));
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: var(--tracking-tight);
+}
+.display-2, h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.6vw, var(--fs-5xl));
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: var(--tracking-tight);
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, var(--fs-3xl));
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+}
+h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+}
+h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+}
+p, .body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+.lead {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-normal);
+  color: var(--fg);
+  font-weight: 400;
+}
+.small, small {
+  font-size: var(--fs-sm);
+  color: var(--fg-soft);
+}
+.eyebrow, .uplabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-soft);
+}
+.eyebrow--brand { color: var(--brand-500); }
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}

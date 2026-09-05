@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Mentoría de IA para pymes en Guadalajara — OperativAI</title>
+  <meta name="description" content="Mentoría de IA personalizada para pymes: diagnosticamos tus tareas de hoy y las mejoramos con IA. Con base en Guadalajara, disponible en todo México.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="assets/operativai-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mentoría de IA para pymes en Guadalajara — OperativAI">
+  <meta property="og:description" content="Diagnosticamos tus tareas de hoy y las mejoramos con IA. Con base en Guadalajara, disponible en todo México.">
+  <meta property="og:image" content="assets/operativai-logo-trimmed.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mentoría de IA para pymes en Guadalajara — OperativAI">
+  <meta name="twitter:description" content="Diagnosticamos tus tareas de hoy y las mejoramos con IA, sin rediseñar tu operación.">
+  <link rel="stylesheet" href="_ds/dealer-solutions-design-system-019e2ca4-6644-77df-8391-6bfe15169c65/colors_and_type.css">
+  <link rel="stylesheet" href="_ds/dealer-solutions-design-system-019e2ca4-6644-77df-8391-6bfe15169c65/ui_kits/website/colors_and_type.css">
+  <script src="_ds/dealer-solutions-design-system-019e2ca4-6644-77df-8391-6bfe15169c65/_ds_bundle.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Mentoría de IA para pymes","provider":{"@type":"Organization","name":"OperativAI"},"areaServed":[{"@type":"City","name":"Guadalajara"},{"@type":"Country","name":"México"}],"description":"Diagnóstico de tareas puntuales y mejora con IA, sin rediseñar la operación del negocio."}
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--brand-500); text-decoration: none; }
+    a:hover { color: var(--brand-700); }
+    details[data-faq] summary { list-style: none; }
+    details[data-faq] summary::-webkit-details-marker { display: none; }
+    .faq-chevron { transition: transform var(--dur-base) var(--ease-out); }
+    details[data-faq][open] .faq-chevron { transform: rotate(180deg); }
+    a:focus-visible, summary:focus-visible { box-shadow: var(--ring-brand); outline: none; border-radius: 2px; }
+    .form-input { font-family: var(--font-body); font-size: 14px; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: var(--r-md); background: var(--bg-elev-1); color: var(--fg); width: 100%; }
+    .form-input:focus { outline: none; box-shadow: var(--ring-brand); border-color: var(--brand-500); }
+    .form-input::placeholder { color: var(--fg-soft); }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .stagger > * { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out); }
+    .stagger.is-visible > * { opacity: 1; transform: translateY(0); }
+    .stagger > *:nth-child(1) { transition-delay: 0ms; }
+    .stagger > *:nth-child(2) { transition-delay: 60ms; }
+    .stagger > *:nth-child(3) { transition-delay: 120ms; }
+    .stagger > *:nth-child(4) { transition-delay: 180ms; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .stagger > * { transition: opacity var(--dur-slow) linear !important; transform: none !important; }
+    }
+  </style>
+</helmet>
+<div style="background:var(--bg);color:var(--fg);font-family:var(--font-body);overflow-x:hidden;">
+
+  <header style="position:sticky;top:0;z-index:100;background:rgba(244,246,249,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);">
+    <div style="max-width:1280px;margin:0 auto;padding:16px clamp(24px,6vw,96px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <a href="OperativAI Landing.dc.html" style="display:flex;align-items:center;gap:12px;color:var(--fg);">
+        <img src="assets/operativai-icon.png" alt="OperativAI" style="height:34px;width:auto;display:block;">
+        <span style="font-weight:700;font-size:18px;letter-spacing:-0.01em;color:var(--fg);">OperativAI</span>
+      </a>
+      <nav aria-label="Principal" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+        <a href="OperativAI Landing.dc.html" style="color:var(--fg);font-size:15px;font-weight:500;">Inicio</a>
+        <a href="OperativAI Agente WhatsApp.dc.html" style="color:var(--fg);font-size:15px;font-weight:500;">Agente WhatsApp</a>
+        <a href="#faq" style="color:var(--fg);font-size:15px;font-weight:500;">Preguntas</a>
+        <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink-900);color:var(--ink-0);padding:12px 20px;font-size:14px;font-weight:600;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <section style="background:var(--grad-soft);">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,10vw,96px) clamp(24px,6vw,96px) clamp(64px,10vw,112px);">
+    <div class="reveal" style="max-width:760px;">
+      <a href="OperativAI Landing.dc.html" style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);">← Volver a inicio</a>
+      <span style="display:block;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--brand-500);margin-top:16px;">Servicio 02 · Mentoría de IA</span>
+      <h1 style="font-family:var(--font-display);font-size:clamp(40px,6.4vw,72px);font-weight:800;line-height:1;letter-spacing:-0.035em;margin:20px 0 0;color:var(--fg);">Mentoría de IA para pymes, personalizada</h1>
+      <p style="font-size:clamp(18px,2vw,21px);line-height:1.45;color:var(--fg-muted);margin:24px 0 0;">No te pedimos cambiar cómo trabajas. Diagnosticamos las tareas que hoy te quitan más tiempo y las mejoramos con IA, sin rediseñar tu operación.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:40px;">
+        <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:var(--ink-900);color:var(--ink-0);font-weight:600;font-size:16px;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión<span style="font-family:var(--font-mono);">↗</span></a>
+        <a href="#metodo" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:transparent;color:var(--fg);font-weight:600;font-size:16px;border:1px solid var(--ink-900);" style-hover="background:var(--ink-900);color:var(--ink-0);">Ver el método</a>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="metodo" style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);border-top:1px solid var(--border);">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:56px;">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">01 — MÉTODO</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);">Mejoramos las tareas que ya te quitan tiempo hoy</h2>
+      </div>
+      <p style="font-size:15px;line-height:1.5;color:var(--fg-muted);max-width:340px;margin:0;">Empezamos por lo que ya te quita tiempo hoy, tal como lo operas.</p>
+    </div>
+    <div class="stagger" style="border-top:1px solid var(--border);">
+      <sc-for list="{{ mentoringSteps }}" as="step" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:100px 1fr;gap:24px;padding:32px 0;border-bottom:1px solid var(--border);align-items:start;">
+          <div style="font-family:var(--font-display);font-size:56px;font-weight:700;letter-spacing:-0.03em;line-height:0.85;color:var(--brand-500);">{{ step.no }}</div>
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--fg-soft);text-transform:uppercase;letter-spacing:0.12em;">{{ step.phase }}</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-0.02em;margin:8px 0 8px;color:var(--fg);">{{ step.title }}</h3>
+            <p style="font-size:15px;line-height:1.55;color:var(--fg-muted);max-width:520px;margin:0;">{{ step.desc }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="para-quien" style="background:var(--bg-elev-2);border-top:1px solid var(--border);">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);">
+      <div class="reveal" style="margin-bottom:56px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">02 — PARA QUIÉN</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);">Pensada para el dueño de pyme, no para el equipo técnico</h2>
+      </div>
+      <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+        <div style="padding:24px;background:var(--bg-elev-1);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:14px;">
+          <i data-lucide="clock" aria-hidden="true" style="width:22px;height:22px;color:var(--brand-500);"></i>
+          <div style="font-size:16px;font-weight:500;line-height:1.4;color:var(--fg);">Partimos de las tareas que hoy te consumen más horas a la semana</div>
+        </div>
+        <div style="padding:24px;background:var(--bg-elev-1);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:14px;">
+          <i data-lucide="user-check" aria-hidden="true" style="width:22px;height:22px;color:var(--brand-500);"></i>
+          <div style="font-size:16px;font-weight:500;line-height:1.4;color:var(--fg);">Sin conocimientos técnicos previos ni jerga de desarrollo</div>
+        </div>
+        <div style="padding:24px;background:var(--bg-elev-1);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:14px;">
+          <i data-lucide="git-branch" aria-hidden="true" style="width:22px;height:22px;color:var(--brand-500);"></i>
+          <div style="font-size:16px;font-weight:500;line-height:1.4;color:var(--fg);">Nada de rediseñar tu operación completa de entrada</div>
+        </div>
+        <div style="padding:24px;background:var(--bg-elev-1);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:14px;">
+          <i data-lucide="trending-up" aria-hidden="true" style="width:22px;height:22px;color:var(--brand-500);"></i>
+          <div style="font-size:16px;font-weight:500;line-height:1.4;color:var(--fg);">Ruta clara hacia el siguiente proyecto de desarrollo, cuando te convenga</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);border-top:1px solid var(--border);">
+    <div class="reveal" style="margin-bottom:48px;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">03 — PREGUNTAS</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);">Preguntas frecuentes</h2>
+    </div>
+    <div style="border-top:1px solid var(--border);max-width:800px;">
+      <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="5">
+        <details data-faq="true" style="border-bottom:1px solid var(--border);">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 0;cursor:pointer;">
+            <span style="font-family:var(--font-display);font-weight:600;font-size:18px;color:var(--fg);">{{ item.q }}</span>
+            <i data-lucide="chevron-down" aria-hidden="true" class="faq-chevron" style="width:18px;height:18px;color:var(--fg-soft);flex-shrink:0;"></i>
+          </summary>
+          <p style="margin:0 0 24px;font-size:15px;line-height:1.6;color:var(--fg-muted);max-width:680px;">{{ item.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="demo" style="background:var(--brand-700);color:var(--ink-0);padding:clamp(80px,12vw,140px) clamp(24px,6vw,96px);">
+    <div class="reveal" style="max-width:1280px;margin:0 auto;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:rgba(246,242,234,0.5);letter-spacing:0.1em;">04 — CONTACTO</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(40px,7vw,88px);font-weight:700;letter-spacing:-0.04em;line-height:0.95;margin:20px 0 40px;color:var(--ink-0);">Agenda una reunión y hacemos el <em style="font-style:italic;font-weight:400;color:var(--accent-light);">diagnóstico</em>.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:48px;align-items:start;padding-top:32px;border-top:1px solid rgba(246,242,234,0.2);">
+        <div>
+          <p style="font-size:18px;line-height:1.5;color:rgba(246,242,234,0.85);max-width:420px;margin:0;">En la primera sesión mapeamos las tareas que más tiempo te quitan hoy, y de ahí armamos el plan.</p>
+          <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:var(--ink-0);color:var(--ink-900);font-weight:600;font-size:16px;border:1px solid var(--ink-0);margin-top:32px;" style-hover="background:var(--brand-500);color:var(--ink-0);border-color:var(--brand-500);">Escríbenos por WhatsApp</a>
+          <div style="font-family:var(--font-mono);font-size:12px;color:rgba(246,242,234,0.5);margin-top:24px;letter-spacing:0.04em;">Sin costo · Sin compromiso · Respuesta en menos de 24 horas</div>
+        </div>
+        <form onSubmit="{{ handleSubmit }}" style="background:var(--ink-0);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);padding:clamp(28px,3vw,36px);display:flex;flex-direction:column;gap:14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <input class="form-input" name="nombre" type="text" placeholder="Nombre" required="true">
+            <input class="form-input" name="cargo" type="text" placeholder="Cargo">
+          </div>
+          <input class="form-input" name="empresa" type="text" placeholder="Empresa" required="true">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <input class="form-input" name="email" type="email" placeholder="Email" required="true">
+            <input class="form-input" name="telefono" type="tel" placeholder="Teléfono" required="true">
+          </div>
+          <textarea class="form-input" name="comentarios" placeholder="Cuéntanos brevemente qué necesitas" rows="3" style="resize:vertical;"></textarea>
+          <input type="hidden" name="area_interes" value="Mentoría de IA para pymes">
+          <input type="hidden" name="fecha_preferida" value="Por definir">
+          <button type="submit" disabled="{{ isSending }}" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;background:var(--ink-900);color:var(--ink-0);font-weight:600;font-size:15px;border:1px solid var(--ink-900);border-radius:var(--r-md);cursor:pointer;" style-hover="background:var(--brand-500);border-color:var(--brand-500);">{{ submitLabel }}</button>
+          <sc-if value="{{ isSent }}" hint-placeholder-val="{{ false }}">
+            <div style="color:var(--success);font-size:13px;font-weight:500;">✓ Enviado — te contactamos pronto.</div>
+          </sc-if>
+          <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+            <div style="color:var(--danger);font-size:13px;font-weight:500;">Hubo un error al enviar. Escríbenos mejor por WhatsApp.</div>
+          </sc-if>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer style="background:var(--bg-elev-2);border-top:1px solid var(--border);">
+    <div style="max-width:1280px;margin:0 auto;padding:64px clamp(24px,6vw,96px) 32px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <img src="assets/operativai-icon.png" alt="OperativAI" style="height:28px;width:auto;">
+            <span style="font-weight:700;font-size:16px;color:var(--fg);">OperativAI</span>
+          </div>
+          <p style="font-size:14px;line-height:1.6;color:var(--fg-muted);max-width:300px;margin:16px 0 0;">Agentes de IA que atienden, venden y operan tu negocio por WhatsApp, y mentorías de IA personalizadas para pymes.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--fg-soft);margin-bottom:16px;">Servicios</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a href="OperativAI Landing.dc.html" style="color:var(--fg-muted);font-size:14px;">Inicio</a>
+            <a href="OperativAI Agente WhatsApp.dc.html" style="color:var(--fg-muted);font-size:14px;">Agente de WhatsApp</a>
+            <a href="#faq" style="color:var(--fg-muted);font-size:14px;">Preguntas</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--fg-soft);margin-bottom:16px;">Empresa</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a href="{{ ctaUrl }}" style="color:var(--fg-muted);font-size:14px;">Agendar reunión</a>
+            <a href="mailto:ventas1@zeutica.com,gerencia.choice@gmail.com,carlos.limon@nexusqtech.com" style="color:var(--fg-muted);font-size:14px;">Contacto</a>
+            <a href="#" style="color:var(--fg-muted);font-size:14px;">Seguridad</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);">
+        <span>© 2026 OperativAI.</span>
+        <span>Guadalajara, México · Disponible en todo el país</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ctaUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://wa.me/523338158423&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { emailStatus: 'idle' };
+  componentDidMount() {
+    if (window.lucide) window.lucide.createIcons();
+    if (window.emailjs) window.emailjs.init({ publicKey: 'NBW1gReMjrVa_mPw3' });
+    const els = this._root ? this._root.querySelectorAll('.reveal, .stagger') : document.querySelectorAll('.reveal, .stagger');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+    this._io = io;
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if (!window.emailjs) return;
+    this.setState({ emailStatus: 'sending' });
+    window.emailjs.sendForm('service_roxgagm', 'template_z4dm23k', e.target)
+      .then(() => { this.setState({ emailStatus: 'sent' }); e.target.reset(); })
+      .catch(() => this.setState({ emailStatus: 'error' }));
+  }
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+  }
+  componentDidUpdate() {
+    if (window.lucide) window.lucide.createIcons();
+  }
+  renderVals() {
+    return {
+      ctaUrl: this.props.ctaUrl ?? 'https://wa.me/523338158423',
+      handleSubmit: this.handleSubmit,
+      isSending: this.state.emailStatus === 'sending',
+      isSent: this.state.emailStatus === 'sent',
+      isError: this.state.emailStatus === 'error',
+      submitLabel: this.state.emailStatus === 'sending' ? 'Enviando…' : 'Enviar solicitud',
+      mentoringSteps: [
+        { no: '01', phase: 'Diagnóstico', title: 'Mapeamos tus tareas de hoy, tal como las operas', desc: 'Sin pedirte cambiar tu proceso: identificamos las tareas puntuales que más tiempo le quitan a tu equipo, en la forma en que ya trabajan.' },
+        { no: '02', phase: 'Mejora puntual', title: 'Aplicamos IA sobre esas tareas específicas', desc: 'Resolvemos primero lo que ya te cuesta tiempo hoy — no un curso genérico ni un rediseño de tu operación completa.' },
+        { no: '03', phase: 'Ruta de crecimiento', title: 'Vemos juntos las áreas de oportunidad', desc: 'Identificamos dónde más te podemos ayudar — atención al cliente, cobranza, cotizaciones, seguimiento a leads, inventario — y de ahí armamos, con evidencia real, el siguiente proyecto que te conviene construir.' },
+        { no: '04', phase: 'Optimización de equipo', title: 'Avanzamos con los procesos de tu personal', desc: 'Una vez resuelta la tarea puntual, ayudamos a optimizar el flujo de trabajo de tu equipo alrededor de ella — mismo proceso, mejor ejecución.' }
+      ],
+      faqs: [
+        { q: '¿Cómo es el formato de la mentoría?', a: 'Sesiones de diagnóstico y seguimiento sobre las tareas puntuales que definimos juntos, a tu ritmo — no un curso grabado ni clases genéricas.' },
+        { q: '¿Necesito conocimientos técnicos previos?', a: 'No. La mentoría está pensada para el dueño de la pyme, no para un equipo técnico. Hablamos de tu operación, no de código.' },
+        { q: '¿Solo hacen el diagnóstico o también implementan la mejora?', a: 'Ambos. Diagnosticamos la tarea puntual y te acompañamos a implementar la mejora con IA sobre esa misma tarea.' },
+        { q: '¿Qué pasa si mis tareas cambian con el tiempo?', a: 'La mentoría es continua: cada mejora puntual nos deja ver el siguiente punto de dolor, y ahí seguimos.' },
+        { q: '¿Esto reemplaza un proyecto de desarrollo más grande?', a: 'No, es el paso anterior. De cada mejora puntual identificamos, con evidencia real, qué proyecto de desarrollo sí te conviene construir después.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
