@@ -96,6 +96,7 @@
   ]
 }
 </script>
+<script src="/analytics.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -372,7 +373,10 @@ class Component extends DCLogic {
     if (!window.emailjs) return;
     this.setState({ emailStatus: 'sending' });
     window.emailjs.sendForm('service_roxgagm', 'template_z4dm23k', e.target)
-      .then(() => { this.setState({ emailStatus: 'sent' }); e.target.reset(); })
+      .then(() => {
+        if (window.trackLead) window.trackLead(new FormData(e.target).get('area_interes'));
+        this.setState({ emailStatus: 'sent' }); e.target.reset();
+      })
       .catch(() => this.setState({ emailStatus: 'error' }));
   }
   componentWillUnmount() {
