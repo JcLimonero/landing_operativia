@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap">
+<title>Agente de IA para refaccionarias y autopartes — OperativAI</title>
+<meta name="description" content="El agente de WhatsApp que busca por número de parte, marca y modelo, dice si hay existencia y en qué sucursal, cotiza y levanta el pedido. Conectado a tu inventario real.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.operativai.com.mx/refaccionarias">
+<link rel="icon" href="/assets/favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1220">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OperativAI">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://www.operativai.com.mx/refaccionarias">
+<meta property="og:title" content="Agente de IA para refaccionarias y autopartes — OperativAI">
+<meta property="og:description" content="El agente de WhatsApp que busca por número de parte, marca y modelo, dice si hay existencia y en qué sucursal, cotiza y levanta el pedido. Conectado a tu inventario real.">
+<meta property="og:image" content="https://www.operativai.com.mx/assets/og-operativai.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agente de IA para refaccionarias y autopartes — OperativAI">
+<meta name="twitter:description" content="El agente de WhatsApp que busca por número de parte, marca y modelo, dice si hay existencia y en qué sucursal, cotiza y levanta el pedido. Conectado a tu inventario real.">
+<meta name="twitter:image" content="https://www.operativai.com.mx/assets/og-operativai.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Agente de IA para refaccionarias y autopartes",
+  "url": "https://www.operativai.com.mx/refaccionarias",
+  "image": "https://www.operativai.com.mx/assets/og-operativai.png",
+  "provider": {
+    "@id": "https://www.operativai.com.mx/#organization"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Guadalajara"
+    },
+    {
+      "@type": "Country",
+      "name": "México"
+    }
+  ],
+  "description": "El agente de WhatsApp que busca por número de parte, marca y modelo, dice si hay existencia y en qué sucursal, cotiza y levanta el pedido. Conectado a tu inventario real."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Reconoce los números de parte aunque el cliente los escriba mal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Normaliza guiones, espacios y errores comunes de captura, y si hay ambigüedad pregunta por marca y modelo antes de cotizar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Maneja precios distintos por tipo de cliente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Si en tu sistema hay listas o niveles de precio por mayoreo, taller o público, el agente cotiza con el nivel que corresponde a quien pregunta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede decir en qué sucursal hay existencia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, si tu inventario está separado por sucursal. Contesta cuántas piezas hay y en cuál, con el dato del momento de la consulta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si la pieza no está en el catálogo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El agente lo dice claro en vez de inventar, toma el dato y lo pasa a tu equipo para cotizarla por especial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona si mi inventario está en Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, aunque conviene revisarlo. En la reunión de diagnóstico vemos cómo está hoy y qué hace falta para que el agente lo consulte de forma confiable."
+      }
+    }
+  ]
+}
+</script>
+<script src="/analytics.js"></script>
+<link rel="stylesheet" href="/_ds/dealer-solutions-design-system-019e2ca4-6644-77df-8391-6bfe15169c65/colors_and_type.css">
+<link rel="stylesheet" href="/_ds/dealer-solutions-design-system-019e2ca4-6644-77df-8391-6bfe15169c65/ui_kits/website/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); overflow-x: hidden; }
+  a { color: var(--brand-500); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(24px,6vw,96px); }
+  header { position: sticky; top: 0; z-index: 100; background: rgba(244,246,249,0.72); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .bar { max-width: 1280px; margin: 0 auto; padding: 16px clamp(24px,6vw,96px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--fg); text-decoration: none; }
+  .brand span { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  nav { display: flex; align-items: center; gap: 28px; }
+  nav a { color: var(--fg); font-size: 15px; font-weight: 500; text-decoration: none; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--ink-900); color: var(--ink-0); padding: 12px 20px; font-size: 14px; font-weight: 600; border: 1px solid var(--ink-900); text-decoration: none; transition: background .2s ease, border-color .2s ease; }
+  .btn:hover { background: var(--brand-500); border-color: var(--brand-500); color: var(--ink-0); }
+  .btn-lg { padding: 18px 28px; font-size: 16px; }
+  .btn-ghost { background: transparent; color: var(--fg); border-color: var(--border-strong); }
+  .btn-ghost:hover { background: var(--bg-elev-2); color: var(--fg); border-color: var(--border-strong); }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--brand-500); text-transform: uppercase; margin: 0 0 18px; }
+  h1 { font-family: var(--font-display); font-size: clamp(36px,6.2vw,64px); line-height: 1.06; letter-spacing: -0.025em; margin: 0 0 22px; max-width: 16ch; }
+  h1 em { font-style: italic; color: var(--brand-500); }
+  .lead { font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: var(--fg-muted); max-width: 62ch; margin: 0 0 36px; }
+  section { padding: clamp(56px,8vw,96px) 0; border-top: 1px solid var(--border); }
+  .hero { padding-top: clamp(48px,7vw,84px); border-top: 0; }
+  .snum { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--fg-soft); text-transform: uppercase; margin: 0 0 14px; }
+  h2 { font-family: var(--font-display); font-size: clamp(26px,3.6vw,38px); line-height: 1.14; letter-spacing: -0.02em; margin: 0 0 14px; max-width: 20ch; }
+  h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin: 0 0 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 36px; }
+  .grid > div { background: var(--bg); padding: 26px 24px; }
+  .grid p { font-size: 14.5px; line-height: 1.6; color: var(--fg-muted); margin: 0; }
+  .dark { background: var(--ink-900); color: var(--ink-0); border-top: 0; }
+  .dark h2, .dark h3 { color: var(--ink-0); }
+  .dark .snum { color: rgba(246,242,234,0.5); }
+  .dark .lead { color: rgba(246,242,234,0.72); }
+  .dark .btn { background: var(--ink-0); color: var(--ink-900); border-color: var(--ink-0); }
+  .dark .btn:hover { background: var(--brand-500); color: var(--ink-0); border-color: var(--brand-500); }
+  details { border-bottom: 1px solid var(--border); }
+  details summary { list-style: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 20px; font-family: var(--font-display); font-weight: 600; font-size: 17px; }
+  details summary::-webkit-details-marker { display: none; }
+  details .chev { font-family: var(--font-mono); color: var(--fg-soft); transition: transform .2s ease; }
+  details[open] .chev { transform: rotate(180deg); }
+  details p { font-size: 15px; line-height: 1.68; color: var(--fg-muted); margin: 0 0 22px; max-width: 68ch; }
+  form { background: var(--ink-0); border-radius: var(--r-xl); box-shadow: var(--shadow-lg); padding: clamp(26px,3vw,34px); display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
+  .form-input { font-family: var(--font-body); font-size: 14px; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: var(--r-md); background: var(--bg-elev-1); color: var(--fg); width: 100%; }
+  .form-input:focus { outline: none; border-color: var(--brand-500); box-shadow: var(--ring-brand); }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.5; color: var(--fg-muted); }
+  .consent input { margin-top: 2px; width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--brand-500); }
+  .msg { font-size: 13px; font-weight: 500; }
+  .cross { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 24px 0; border-top: 1px solid var(--border); text-decoration: none; color: var(--fg); }
+  .cross:hover { color: var(--brand-500); }
+  footer { border-top: 1px solid var(--border); padding: 40px 0; }
+  footer .fnav { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; }
+  footer a { color: var(--fg-muted); font-size: 14px; text-decoration: none; }
+  footer a:hover { color: var(--fg); }
+  footer p { font-family: var(--font-mono); font-size: 12px; color: var(--fg-soft); margin: 0; }
+  @media (max-width: 700px) {
+    nav .nav-link { display: none; }
+    .bar { padding-left: 16px; padding-right: 16px; gap: 12px; }
+    .row2 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/assets/operativai-icon.png" alt="" width="48" height="34" style="height:34px;width:auto;display:block;">
+      <span>OperativAI</span>
+    </a>
+    <nav>
+      <a class="nav-link" href="/agente-whatsapp">Agente WhatsApp</a>
+      <a class="nav-link" href="/mentoria-ia">Mentoría IA</a>
+      <a class="nav-link" href="#faq">Preguntas</a>
+      <a class="btn" href="https://wa.me/523338158423?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20refaccionarias%20y%20quiero%20agendar%20una%20reuni%C3%B3n.">Agendar reunión</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">GIRO · REFACCIONARIAS Y AUTOPARTES</p>
+      <h1>Tu catálogo contesta <em>por número de parte,</em> no por adivinanza.</h1>
+      <p class="lead">Refaccionarias, distribuidores y mayoristas: el agente busca por número de parte, marca, modelo y año, dice si hay existencia y en qué sucursal, cotiza y levanta el pedido. Conectado a tu inventario real, con las existencias de hoy.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a class="btn btn-lg" href="https://wa.me/523338158423?text=Hola%2C%20tengo%20una%20refaccionaria%20y%20quiero%20ver%20el%20agente%20de%20WhatsApp.">Agendar reunión <span style="font-family:var(--font-mono);">↗</span></a>
+        <a class="btn btn-lg btn-ghost" href="#como">Ver cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="snum">01 — El problema</p>
+      <h2>Lo que pasa hoy en el mostrador</h2>
+      <div class="grid"><div><h3>«¿Tienes esta pieza?»</h3><p>Es la pregunta que más llega y la que más tarda: alguien tiene que dejar el mostrador e ir a buscar al sistema.</p></div><div><h3>Compatibilidades de memoria</h3><p>Marca, modelo, año y motor. Si quien contesta no lo domina, se cotiza la pieza equivocada.</p></div><div><h3>Existencias por sucursal</h3><p>El cliente pregunta por una y la hay en otra, pero nadie lo sabe en el momento de contestar.</p></div><div><h3>Los mensajes del fin de semana</h3><p>El taller que necesita la pieza el sábado no espera al lunes: la compra donde sí le contestaron.</p></div></div>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="wrap">
+      <p class="snum">02 — Cómo funciona</p>
+      <h2>Conectado a tu inventario</h2>
+      <p class="lead">Esa es la diferencia con un bot genérico: no contesta de memoria, contesta con tus datos.</p>
+      <div class="grid"><div><h3>Búsqueda por número de parte</h3><p>Reconoce el número aunque venga con guiones, espacios o mal escrito.</p></div><div><h3>Marca, modelo, año y motor</h3><p>Filtra por compatibilidad y pregunta lo que falta antes de cotizar.</p></div><div><h3>Existencia por sucursal</h3><p>Dice cuántas hay y dónde, con el dato del momento en que se pregunta.</p></div><div><h3>Cotización y pedido</h3><p>Arma la cotización con tus precios y niveles, y levanta el pedido sin pasar por el mostrador.</p></div></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <p class="snum">03 — Preguntas</p>
+      <h2>Lo que nos preguntan de este giro</h2>
+      <div style="margin-top:32px;border-top:1px solid var(--border);"><details><summary>¿Reconoce los números de parte aunque el cliente los escriba mal?<span class="chev">⌄</span></summary><p>Sí. Normaliza guiones, espacios y errores comunes de captura, y si hay ambigüedad pregunta por marca y modelo antes de cotizar.</p></details><details><summary>¿Maneja precios distintos por tipo de cliente?<span class="chev">⌄</span></summary><p>Sí. Si en tu sistema hay listas o niveles de precio por mayoreo, taller o público, el agente cotiza con el nivel que corresponde a quien pregunta.</p></details><details><summary>¿Puede decir en qué sucursal hay existencia?<span class="chev">⌄</span></summary><p>Sí, si tu inventario está separado por sucursal. Contesta cuántas piezas hay y en cuál, con el dato del momento de la consulta.</p></details><details><summary>¿Y si la pieza no está en el catálogo?<span class="chev">⌄</span></summary><p>El agente lo dice claro en vez de inventar, toma el dato y lo pasa a tu equipo para cotizarla por especial.</p></details><details><summary>¿Funciona si mi inventario está en Excel?<span class="chev">⌄</span></summary><p>Sí, aunque conviene revisarlo. En la reunión de diagnóstico vemos cómo está hoy y qué hace falta para que el agente lo consulte de forma confiable.</p></details></div>
+      <a class="cross" href="/automotriz">
+        <span><strong style="font-family:var(--font-display);font-size:17px;">¿Tienes agencia o taller?</strong><br><span style="font-size:14px;color:var(--fg-muted);">Mira la página para agencias y talleres automotrices</span></span>
+        <span style="font-family:var(--font-mono);">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="dark" id="contacto">
+    <div class="wrap">
+      <p class="snum">04 — Contacto</p>
+      <h2>Agenda una reunión y te lo mostramos.</h2>
+      <p class="lead">En una llamada revisamos tu operación real y te decimos qué haría falta para conectarlo. Sin costo, sin compromiso.</p>
+      <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;">
+        <div style="flex:1;min-width:280px;">
+          <a class="btn btn-lg" href="https://wa.me/523338158423?text=Hola%2C%20quiero%20ver%20el%20agente%20de%20WhatsApp%20buscando%20piezas%20en%20mi%20cat%C3%A1logo.">Escríbenos por WhatsApp</a>
+          <p style="font-family:var(--font-mono);font-size:12px;color:rgba(246,242,234,0.5);margin-top:18px;">Sin costo · Sin compromiso · Respuesta en menos de 24 horas</p>
+        </div>
+        <form id="f">
+          <div class="row2">
+            <div><label class="sr-only" for="f-nombre">Nombre</label><input class="form-input" id="f-nombre" name="nombre" type="text" placeholder="Nombre" autocomplete="name" required></div>
+            <div><label class="sr-only" for="f-empresa">Empresa</label><input class="form-input" id="f-empresa" name="empresa" type="text" placeholder="Empresa" autocomplete="organization"></div>
+          </div>
+          <div class="row2">
+            <div><label class="sr-only" for="f-email">Email</label><input class="form-input" id="f-email" name="email" type="email" placeholder="Email" autocomplete="email" required></div>
+            <div><label class="sr-only" for="f-telefono">Teléfono</label><input class="form-input" id="f-telefono" name="telefono" type="tel" placeholder="Teléfono" autocomplete="tel" required></div>
+          </div>
+          <label class="sr-only" for="f-comentarios">Comentarios</label>
+          <textarea class="form-input" id="f-comentarios" name="comentarios" rows="3" placeholder="Cuéntanos brevemente qué necesitas" style="resize:vertical;"></textarea>
+          <div class="hp" aria-hidden="true">
+            <label for="f-sitio-web">No llenar</label>
+            <input id="f-sitio-web" type="text" name="sitio_web" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="area_interes" value="Agente de IA para refaccionarias y autopartes">
+          <input type="hidden" name="fecha_preferida" value="Por definir">
+          <label class="consent">
+            <input type="checkbox" name="consentimiento" value="Sí" required>
+            <span>Acepto el <a href="/privacidad" style="text-decoration:underline;">aviso de privacidad</a> y que me contacten sobre mi solicitud.</span>
+          </label>
+          <button class="btn" type="submit" id="sb" style="justify-content:center;border-radius:var(--r-md);padding:14px 24px;font-size:15px;">Enviar solicitud</button>
+          <div class="msg" id="ok" hidden style="color:var(--success);">✓ Enviado — te contactamos pronto.</div>
+          <div class="msg" id="err" hidden style="color:var(--danger);">Hubo un error al enviar. Escríbenos mejor por WhatsApp.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fnav">
+      <a href="/">Inicio</a>
+      <a href="/agente-whatsapp">Agente de WhatsApp</a>
+      <a href="/mentoria-ia">Mentoría de IA</a>
+      <a href="/automotriz">Automotriz</a>
+      <a href="/refaccionarias">Refaccionarias</a>
+      <a href="https://wa.me/523338158423?text=Hola%2C%20vengo%20del%20pie%20de%20la%20p%C3%A1gina%20de%20refaccionarias%20y%20quiero%20agendar%20una%20reuni%C3%B3n.">Agendar reunión</a>
+      <a href="/privacidad">Aviso de privacidad</a>
+    </div>
+    <p>© 2026 OperativAI · Guadalajara, México · Disponible en todo el país</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  if (window.emailjs) window.emailjs.init({ publicKey: 'NBW1gReMjrVa_mPw3' });
+  var f = document.getElementById('f'), sb = document.getElementById('sb');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Trampa antibots: un humano nunca ve ni llena este campo.
+    if (f.sitio_web.value) { document.getElementById('ok').hidden = false; f.reset(); return; }
+    if (!window.emailjs) return;
+    sb.disabled = true; sb.textContent = 'Enviando…';
+    window.emailjs.sendForm('service_roxgagm', 'template_z4dm23k', f)
+      .then(function () {
+        if (window.trackLead) window.trackLead('Agente de IA para refaccionarias y autopartes');
+        document.getElementById('ok').hidden = false;
+        document.getElementById('err').hidden = true;
+        f.reset();
+      })
+      .catch(function () { document.getElementById('err').hidden = false; })
+      .then(function () { sb.disabled = false; sb.textContent = 'Enviar solicitud'; });
+  });
+</script>
+
+</body>
+</html>

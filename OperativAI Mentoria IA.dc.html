@@ -156,7 +156,7 @@
         <a href="/" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Inicio</a>
         <a href="/agente-whatsapp" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Agente WhatsApp</a>
         <a href="#faq" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Preguntas</a>
-        <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink-900);color:var(--ink-0);padding:12px 20px;font-size:14px;font-weight:600;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión</a>
+        <a href="{{ ctaHeader }}" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink-900);color:var(--ink-0);padding:12px 20px;font-size:14px;font-weight:600;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión</a>
       </nav>
     </div>
   </header>
@@ -170,7 +170,7 @@
       <h1 style="font-family:var(--font-display);font-size:clamp(40px,6.4vw,72px);font-weight:800;line-height:1;letter-spacing:-0.035em;margin:20px 0 0;color:var(--fg);">Mentoría de IA para pymes, personalizada</h1>
       <p style="font-size:clamp(18px,2vw,21px);line-height:1.45;color:var(--fg-muted);margin:24px 0 0;">No te pedimos cambiar cómo trabajas. Diagnosticamos las tareas que hoy te quitan más tiempo y las mejoramos con IA, sin rediseñar tu operación.</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:40px;">
-        <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:var(--ink-900);color:var(--ink-0);font-weight:600;font-size:16px;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión<span style="font-family:var(--font-mono);">↗</span></a>
+        <a href="{{ ctaHero }}" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:var(--ink-900);color:var(--ink-0);font-weight:600;font-size:16px;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión<span style="font-family:var(--font-mono);">↗</span></a>
         <a href="#metodo" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:transparent;color:var(--fg);font-weight:600;font-size:16px;border:1px solid var(--ink-900);" style-hover="background:var(--ink-900);color:var(--ink-0);">Ver el método</a>
       </div>
     </div>
@@ -251,7 +251,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:48px;align-items:start;padding-top:32px;border-top:1px solid rgba(246,242,234,0.2);">
         <div>
           <p style="font-size:18px;line-height:1.5;color:rgba(246,242,234,0.85);max-width:420px;margin:0;">En la primera sesión mapeamos las tareas que más tiempo te quitan hoy, y de ahí armamos el plan.</p>
-          <a href="{{ ctaUrl }}" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:var(--ink-0);color:var(--ink-900);font-weight:600;font-size:16px;border:1px solid var(--ink-0);margin-top:32px;" style-hover="background:var(--brand-500);color:var(--ink-0);border-color:var(--brand-500);">Escríbenos por WhatsApp</a>
+          <a href="{{ ctaContacto }}" style="display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:var(--ink-0);color:var(--ink-900);font-weight:600;font-size:16px;border:1px solid var(--ink-0);margin-top:32px;" style-hover="background:var(--brand-500);color:var(--ink-0);border-color:var(--brand-500);">Escríbenos por WhatsApp</a>
           <div style="font-family:var(--font-mono);font-size:12px;color:rgba(246,242,234,0.5);margin-top:24px;letter-spacing:0.04em;">Sin costo · Sin compromiso · Respuesta en menos de 24 horas</div>
         </div>
         <form onSubmit="{{ handleSubmit }}" style="background:var(--ink-0);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);padding:clamp(28px,3vw,36px);display:flex;flex-direction:column;gap:14px;">
@@ -304,13 +304,15 @@
           <div style="display:flex;flex-direction:column;gap:10px;">
             <a href="/" style="color:var(--fg-muted);font-size:14px;">Inicio</a>
             <a href="/agente-whatsapp" style="color:var(--fg-muted);font-size:14px;">Agente de WhatsApp</a>
+            <a href="/automotriz" style="color:var(--fg-muted);font-size:14px;">Automotriz</a>
+            <a href="/refaccionarias" style="color:var(--fg-muted);font-size:14px;">Refaccionarias</a>
             <a href="#faq" style="color:var(--fg-muted);font-size:14px;">Preguntas</a>
           </div>
         </div>
         <div>
           <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--fg-soft);margin-bottom:16px;">Empresa</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
-            <a href="{{ ctaUrl }}" style="color:var(--fg-muted);font-size:14px;">Agendar reunión</a>
+            <a href="{{ ctaFooter }}" style="color:var(--fg-muted);font-size:14px;">Agendar reunión</a>
             <a href="#demo" style="color:var(--fg-muted);font-size:14px;">Contacto</a>
             <a href="/privacidad" style="color:var(--fg-muted);font-size:14px;">Aviso de privacidad</a>
           </div>
@@ -362,6 +364,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       ctaUrl: this.props.ctaUrl ?? 'https://wa.me/523338158423',
+      ctaHeader: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, vengo de la página de mentoría de IA y quiero agendar una reunión.'),
+      ctaHero: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, me interesa la mentoría de IA para mi empresa. ¿Podemos agendar?'),
+      ctaContacto: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, quiero saber cómo sería el diagnóstico de mentoría para mi operación.'),
+      ctaFooter: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, vengo del pie de la página de mentoría de IA y quiero agendar una reunión.'),
       handleSubmit: this.handleSubmit,
       isSending: this.state.emailStatus === 'sending',
       isSent: this.state.emailStatus === 'sent',

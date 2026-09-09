@@ -17,6 +17,14 @@
     {
       "source": "/privacidad",
       "destination": "/privacidad.html"
+    },
+    {
+      "source": "/automotriz",
+      "destination": "/automotriz.html"
+    },
+    {
+      "source": "/refaccionarias",
+      "destination": "/refaccionarias.html"
     }
   ],
   "redirects": [
@@ -38,6 +46,16 @@
     {
       "source": "/privacidad.html",
       "destination": "/privacidad",
+      "permanent": true
+    },
+    {
+      "source": "/automotriz.html",
+      "destination": "/automotriz",
+      "permanent": true
+    },
+    {
+      "source": "/refaccionarias.html",
+      "destination": "/refaccionarias",
       "permanent": true
     }
   ],
