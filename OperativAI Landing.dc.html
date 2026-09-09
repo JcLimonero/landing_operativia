@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap">
 <title>OperativAI — Agentes de IA para WhatsApp y mentoría de IA en Guadalajara</title>
 <meta name="description" content="OperativAI construye agentes de IA para WhatsApp y mentorías de IA para pymes, con base en Guadalajara y alcance en todo México. Agenda una reunión.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://www.operativai.com.mx/">
-<link rel="icon" href="/assets/operativai-icon.png">
+<link rel="icon" href="/assets/favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1220">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OperativAI">
 <meta property="og:locale" content="es_MX">
@@ -128,6 +133,7 @@
     .stagger > *:nth-child(2) { transition-delay: 60ms; }
     .stagger > *:nth-child(3) { transition-delay: 120ms; }
     .card-link { transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out); }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     .consent { display:flex; align-items:flex-start; gap:10px; font-size:13px; line-height:1.5; color:var(--fg-muted); }
     .consent input { margin-top:2px; width:16px; height:16px; flex-shrink:0; accent-color:var(--brand-500); }
@@ -306,6 +312,10 @@
             <input type="checkbox" name="consentimiento" value="Sí" required="true">
             <span>Acepto el <a href="/privacidad" style="text-decoration:underline;">aviso de privacidad</a> y que me contacten sobre mi solicitud.</span>
           </label>
+          <div class="hp" aria-hidden="true">
+            <label for="f-sitio-web">No llenar</label>
+            <input id="f-sitio-web" type="text" name="sitio_web" tabindex="-1" autocomplete="off">
+          </div>
           <button type="submit" disabled="{{ isSending }}" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;background:var(--ink-900);color:var(--ink-0);font-weight:600;font-size:15px;border:1px solid var(--ink-900);border-radius:var(--r-md);cursor:pointer;" style-hover="background:var(--brand-500);border-color:var(--brand-500);">{{ submitLabel }}</button>
           <sc-if value="{{ isSent }}" hint-placeholder-val="{{ false }}">
             <div style="color:var(--success);font-size:13px;font-weight:500;">✓ Enviado — te contactamos pronto.</div>
@@ -371,6 +381,10 @@ class Component extends DCLogic {
   handleSubmit = (e) => {
     e.preventDefault();
     if (!window.emailjs) return;
+    // Trampa antibots: un humano nunca ve ni llena este campo.
+    if (e.target.sitio_web && e.target.sitio_web.value) {
+      this.setState({ emailStatus: 'sent' }); e.target.reset(); return;
+    }
     this.setState({ emailStatus: 'sending' });
     window.emailjs.sendForm('service_roxgagm', 'template_z4dm23k', e.target)
       .then(() => {
