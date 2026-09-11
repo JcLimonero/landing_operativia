@@ -1,0 +1,27 @@
+# OperativAI
+
+> Agentes de IA para WhatsApp y mentoría de IA para pymes y negocios pequeños en México, con base en Guadalajara.
+
+OperativAI construye agentes de inteligencia artificial que atienden, cotizan y agendan por WhatsApp Business API, conectados a la operación real del negocio (ventas, inventario, cobranza), y ofrece mentorías de IA que diagnostican las tareas que más tiempo le quitan a un equipo y las mejoran con IA sin rediseñar el proceso. Atiende pymes y profesionales independientes de todos los giros; las agencias y talleres automotrices son una especialización, no el foco.
+
+## Servicios
+
+- [Agente de IA para WhatsApp](https://www.operativai.com.mx/agente-whatsapp): atiende, cotiza y agenda por WhatsApp 24/7, conectado a la plataforma de ventas, inventario y cobranza del negocio. Pasa la conversación a una persona con todo el contexto cuando hace falta.
+- [Mentoría de IA para pymes](https://www.operativai.com.mx/mentoria-ia): diagnóstico de las tareas que hoy quitan más tiempo y mejora con IA, sin pedir cambiar el proceso. Arranca con el diagnóstico en la primera sesión.
+
+## Especializaciones
+
+- [Agencias y talleres automotrices](https://www.operativai.com.mx/automotriz): el agente responde por disponibilidad de unidades, cotiza, agenda pruebas de manejo y citas de servicio, conectado al inventario.
+
+## Datos clave
+
+- Ubicación: Guadalajara, Jalisco, México. Servicio en todo el país.
+- Canal: WhatsApp Business API o WhatsApp Web.
+- Implementación del agente: alrededor de dos semanas.
+- Primera reunión de diagnóstico: sin costo ni compromiso.
+- Clientes: empresas que operan su propio número de WhatsApp, y agencias o distribuidores que revenden el servicio a sus clientes.
+- Contacto: WhatsApp +52 33 3815 8423.
+
+## Legal
+
+- [Aviso de privacidad](https://www.operativai.com.mx/privacidad)
