@@ -29,17 +29,28 @@
   ],
   "redirects": [
     {
-      "source": "/OperativAI Landing.dc.html",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "operativai.com.mx"
+        }
+      ],
+      "destination": "https://www.operativai.com.mx/$1",
+      "permanent": true
+    },
+    {
+      "source": "/OperativAI(.*)Landing.dc.html",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/OperativAI Agente WhatsApp.dc.html",
+      "source": "/OperativAI(.*)Agente(.*)WhatsApp.dc.html",
       "destination": "/agente-whatsapp",
       "permanent": true
     },
     {
-      "source": "/OperativAI Mentoria IA.dc.html",
+      "source": "/OperativAI(.*)Mentoria(.*)IA.dc.html",
       "destination": "/mentoria-ia",
       "permanent": true
     },
