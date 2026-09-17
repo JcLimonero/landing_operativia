@@ -141,6 +141,10 @@
     .stagger > *:nth-child(5) { transition-delay: 240ms; }
     .stagger > *:nth-child(6) { transition-delay: 300ms; }
     .stagger > *:nth-child(7) { transition-delay: 360ms; }
+    .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 200; display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px 12px 12px; background: #25D366; color: #fff; font-size: 14px; font-weight: 600; border-radius: 999px; box-shadow: 0 8px 24px rgba(0,0,0,0.18); text-decoration: none; }
+    .wa-float:hover { background: #1EBE5A; color: #fff; }
+    .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
+    @media (max-width: 700px) { .wa-float span { display: none; } .wa-float { padding: 12px; } }
     .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     .consent { display:flex; align-items:flex-start; gap:10px; font-size:13px; line-height:1.5; color:var(--fg-muted); }
@@ -240,7 +244,7 @@
           </div>
         </div>
       </div>
-      <div style="text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--fg-soft);letter-spacing:0.06em;margin-top:12px;">Ejemplo de conversación con el agente</div>
+      <div style="text-align:center;margin-top:14px;"><div style="font-family:var(--font-mono);font-size:11px;color:var(--fg-soft);letter-spacing:0.06em;">Ejemplo de conversación con el agente</div><a href="https://wa.me/5213317586975?text=Hola%2C%20quiero%20probar%20el%20agente%20de%20IA." style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:11px 18px;background:var(--brand-500);color:var(--ink-0);font-size:14px;font-weight:600;border-radius:var(--r-pill);" style-hover="background:var(--brand-700);color:var(--ink-0);">Pruébalo tú mismo: escríbele al agente <span style="font-family:var(--font-mono);">↗</span></a><div style="font-size:12px;color:var(--fg-soft);margin-top:8px;">Te contesta nuestro agente de IA — el mismo que instalamos en tu negocio.</div></div>
     </div>
   </div>
   </section>
@@ -439,8 +443,9 @@
   </footer>
 </div>
 
+<a class="wa-float" href="https://wa.me/5213317586975?text=Hola%2C%20quiero%20probar%20el%20agente%20de%20IA." aria-label="Escríbele a nuestro agente de IA por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.23 8.24m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28"/></svg><span>Escríbele al agente</span></a>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;ctaUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://wa.me/523338158423&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;showAgencyNote&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;ctaUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://wa.me/5213317586975&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;showAgencyNote&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
 class Component extends DCLogic {
   state = { emailStatus: 'idle' };
   componentDidMount() {
@@ -476,11 +481,11 @@ class Component extends DCLogic {
   }
   renderVals() {
     return {
-      ctaUrl: this.props.ctaUrl ?? 'https://wa.me/523338158423',
-      ctaHeader: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, vengo de la página del agente de WhatsApp y quiero agendar una reunión.'),
-      ctaHero: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, me interesa el agente de IA para WhatsApp. ¿Podemos agendar una reunión?'),
-      ctaContacto: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, quiero ver el agente de WhatsApp funcionando con mi negocio.'),
-      ctaFooter: (this.props.ctaUrl ?? 'https://wa.me/523338158423') + '?text=' + encodeURIComponent('Hola, vengo del pie de la página del agente de WhatsApp y quiero agendar una reunión.'),
+      ctaUrl: this.props.ctaUrl ?? 'https://wa.me/5213317586975',
+      ctaHeader: (this.props.ctaUrl ?? 'https://wa.me/5213317586975') + '?text=' + encodeURIComponent('Hola, vengo de la página del agente de WhatsApp y quiero agendar una reunión.'),
+      ctaHero: (this.props.ctaUrl ?? 'https://wa.me/5213317586975') + '?text=' + encodeURIComponent('Hola, me interesa el agente de IA para WhatsApp. ¿Podemos agendar una reunión?'),
+      ctaContacto: (this.props.ctaUrl ?? 'https://wa.me/5213317586975') + '?text=' + encodeURIComponent('Hola, quiero ver el agente de WhatsApp funcionando con mi negocio.'),
+      ctaFooter: (this.props.ctaUrl ?? 'https://wa.me/5213317586975') + '?text=' + encodeURIComponent('Hola, vengo del pie de la página del agente de WhatsApp y quiero agendar una reunión.'),
       showAgencyNote: this.props.showAgencyNote ?? true,
       handleSubmit: this.handleSubmit,
       isSending: this.state.emailStatus === 'sending',

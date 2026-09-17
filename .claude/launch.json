@@ -4,7 +4,7 @@
     {
       "name": "landing",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["/private/tmp/claude-501/-Users-jclimonero-Developer-landig-opertaivai/95672e2c-82f1-4a87-b6d7-80eb3e1fcd12/scratchpad/serve.py"],
+      "runtimeArgs": [".claude/serve.py"],
       "port": 8900
     }
   ]
