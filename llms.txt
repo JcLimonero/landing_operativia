@@ -26,3 +26,4 @@ OperativAI construye agentes de inteligencia artificial que atienden, cotizan y 
 ## Legal
 
 - [Aviso de privacidad](https://www.operativai.com.mx/privacidad)
+- [Condiciones del servicio](https://www.operativai.com.mx/condiciones)
