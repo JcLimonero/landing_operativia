@@ -29,6 +29,10 @@
     {
       "source": "/refaccionarias",
       "destination": "/refaccionarias.html"
+    },
+    {
+      "source": "/precios",
+      "destination": "/precios.html"
     }
   ],
   "redirects": [
@@ -76,6 +80,11 @@
     {
       "source": "/refaccionarias.html",
       "destination": "/refaccionarias",
+      "permanent": true
+    },
+    {
+      "source": "/precios.html",
+      "destination": "/precios",
       "permanent": true
     }
   ],

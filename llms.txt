@@ -8,10 +8,22 @@ OperativAI construye agentes de inteligencia artificial que atienden, cotizan y 
 
 - [Agente de IA para WhatsApp](https://www.operativai.com.mx/agente-whatsapp): atiende, cotiza y agenda por WhatsApp 24/7, conectado a la plataforma de ventas, inventario y cobranza del negocio. Pasa la conversación a una persona con todo el contexto cuando hace falta.
 - [Mentoría de IA para pymes](https://www.operativai.com.mx/mentoria-ia): diagnóstico de las tareas que hoy quitan más tiempo y mejora con IA, sin pedir cambiar el proceso. Arranca con el diagnóstico en la primera sesión.
+- [Precios y planes](https://www.operativai.com.mx/precios): los cuatro planes mensuales del agente de IA (Esencial, Impulso, Negocio y Empresa) con sus límites, qué incluye cada uno y una tabla comparativa.
 
 ## Especializaciones
 
 - [Agencias y talleres automotrices](https://www.operativai.com.mx/automotriz): el agente responde por disponibilidad de unidades, cotiza, agenda pruebas de manejo y citas de servicio, conectado al inventario.
+
+## Precios
+
+Todos los planes son mensuales, en pesos mexicanos (MXN). Los precios son netos.
+
+- Esencial: $299 al mes. Plan básico para pequeños negocios. 1 vendedor, sin proveedores en la agenda, 100 créditos al mes y 500 leads mensuales. Incluye agente de IA y herramientas del agente.
+- Impulso: $499 al mes. Plan básico para negocios o profesionales que agendan citas. Hasta 2 vendedores, hasta 5 proveedores en la agenda, 150 créditos al mes y 1,000 leads mensuales. Incluye agente de IA, herramientas del agente y calendario.
+- Negocio: $1,499 al mes. Plan CRM para gestionar ventas y vendedores. Hasta 5 vendedores, hasta 15 proveedores en la agenda, 500 créditos al mes y 2,000 leads mensuales. Incluye agente de IA, gestión de vendedores, herramientas del agente, CRM de campo y calendario.
+- Empresa: $3,999 al mes. Automatización y gestión para equipos con necesidades especiales. Vendedores ilimitados, 2,000 créditos al mes y 3,500 leads mensuales. Incluye agente de IA, gestión de vendedores, herramientas del agente, CRM de campo y calendario.
+- Créditos adicionales: paquetes de 100 ($29.99), 500 ($129.99), 1,000 ($239.99) y 5,000 ($999.99) créditos. Los créditos se utilizan al ejecutar herramientas y funciones del agente de IA; los paquetes adicionales se suman al saldo y no vencen.
+- Detalle y contratación: https://www.operativai.com.mx/precios
 
 ## Datos clave
 

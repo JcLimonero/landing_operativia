@@ -136,14 +136,15 @@
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     .consent { display:flex; align-items:flex-start; gap:10px; font-size:13px; line-height:1.5; color:var(--fg-muted); }
     .consent input { margin-top:2px; width:16px; height:16px; flex-shrink:0; accent-color:var(--brand-500); }
-    /* El enlace de sesión alarga la barra: se aprieta y se suelta "Preguntas"
+    /* El enlace de sesión alarga la barra: se aprieta el espaciado y, donde hay "Inicio", se suelta
        en anchos intermedios para que siga cabiendo en una sola fila. */
     @media (max-width: 1060px) {
       header nav { gap: 18px !important; }
       header > div { padding-left: 24px !important; padding-right: 24px !important; }
     }
     @media (max-width: 870px) {
-      header nav a[href="#faq"] { display: none; }
+      header nav { gap: 8px !important; }
+      header nav a[href="/"] { display: none; }
     }
     @media (max-width: 790px) {
       header nav .nav-link { display: none; }
@@ -169,7 +170,7 @@
       <nav aria-label="Principal" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
         <a href="/" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Inicio</a>
         <a href="/agente-whatsapp" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Agente WhatsApp</a>
-        <a href="#faq" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Preguntas</a>
+        <a href="/precios" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Precios</a>
         <a href="https://agente.operativai.com.mx/login" class="nav-link" style="color:var(--fg);font-size:15px;font-weight:500;">Iniciar sesión</a>
         <a href="{{ ctaHeader }}" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink-900);color:var(--ink-0);padding:12px 20px;font-size:14px;font-weight:600;border:1px solid var(--ink-900);" style-hover="background:var(--brand-500);border-color:var(--brand-500);">Agendar reunión</a>
       </nav>
@@ -321,6 +322,7 @@
             <a href="/agente-whatsapp" style="color:var(--fg-muted);font-size:14px;">Agente de WhatsApp</a>
             <a href="/automotriz" style="color:var(--fg-muted);font-size:14px;">Automotriz</a>
             <a href="/refaccionarias" style="color:var(--fg-muted);font-size:14px;">Refaccionarias</a>
+            <a href="/precios" style="color:var(--fg-muted);font-size:14px;">Precios</a>
             <a href="#faq" style="color:var(--fg-muted);font-size:14px;">Preguntas</a>
           </div>
         </div>
