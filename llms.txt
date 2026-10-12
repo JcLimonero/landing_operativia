@@ -16,7 +16,7 @@ OperativAI construye agentes de inteligencia artificial que atienden, cotizan y 
 
 ## Precios
 
-Todos los planes son mensuales, en pesos mexicanos (MXN). Los precios son netos.
+Todos los planes son mensuales, en pesos mexicanos (MXN). Los precios no incluyen IVA: se suma 16% al cobrar.
 
 - Esencial: $299 al mes. Plan básico para pequeños negocios. 1 vendedor, sin proveedores en la agenda, 100 créditos al mes y 500 leads mensuales. Incluye agente de IA y herramientas del agente.
 - Impulso: $499 al mes. Plan básico para negocios o profesionales que agendan citas. Hasta 2 vendedores, hasta 5 proveedores en la agenda, 150 créditos al mes y 1,000 leads mensuales. Incluye agente de IA, herramientas del agente y calendario.

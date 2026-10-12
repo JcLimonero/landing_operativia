@@ -61,6 +61,12 @@
           "@type": "Service",
           "name": "Plan Esencial",
           "description": "Plan básico para pequeños negocios."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 299,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -73,6 +79,12 @@
           "@type": "Service",
           "name": "Plan Impulso",
           "description": "Plan básico para negocios o profesionales que agendan citas."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 499,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -85,6 +97,12 @@
           "@type": "Service",
           "name": "Plan Negocio",
           "description": "Plan CRM para gestionar tus ventas y vendedores."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 1499,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -97,6 +115,12 @@
           "@type": "Service",
           "name": "Plan Empresa",
           "description": "Automatización y gestión para equipos con necesidades especiales."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 3999,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -110,6 +134,12 @@
           "@type": "Service",
           "name": "100 créditos adicionales",
           "description": "Los créditos se utilizan al ejecutar herramientas y funciones del agente de IA."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 29.99,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -123,6 +153,12 @@
           "@type": "Service",
           "name": "500 créditos adicionales",
           "description": "Los créditos se utilizan al ejecutar herramientas y funciones del agente de IA."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 129.99,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -136,6 +172,12 @@
           "@type": "Service",
           "name": "1,000 créditos adicionales",
           "description": "Los créditos se utilizan al ejecutar herramientas y funciones del agente de IA."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 239.99,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       },
       {
@@ -149,6 +191,12 @@
           "@type": "Service",
           "name": "5,000 créditos adicionales",
           "description": "Los créditos se utilizan al ejecutar herramientas y funciones del agente de IA."
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 999.99,
+          "priceCurrency": "MXN",
+          "valueAddedTaxIncluded": false
         }
       }
     ]
@@ -265,6 +313,7 @@
   .feats .yes .mk { color: var(--brand-500); }
   .feats .no { color: var(--fg-soft); }
   .plan-cta { margin-top: auto; justify-content: center; border-radius: var(--r-md); padding: 14px 20px; font-size: 15px; }
+  .price-iva { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--fg-muted); margin: 6px 0 8px; }
   .price-note { font-size: 14px; line-height: 1.5; color: var(--fg-soft); margin: 22px 0 0; }
   .tbl-scroll { position: relative; overflow-x: auto; margin-top: 32px; border: 1px solid var(--border-strong); border-radius: var(--r-xl); background: var(--bg-elev-2); -webkit-overflow-scrolling: touch; }
   .tbl-scroll:focus-visible { outline: none; box-shadow: var(--ring-brand); }
@@ -360,6 +409,7 @@
       <article class="plan" aria-labelledby="plan-esencial">
         <h3 id="plan-esencial">Esencial</h3>
         <p class="price"><span class="amount">$299</span><span class="per">/mes</span></p>
+        <p class="price-iva">+ IVA</p>
         <p class="pdesc">Plan básico para pequeños negocios</p>
         <ul class="limits"><li>1 vendedor</li><li>Sin proveedores en la agenda</li><li>100 créditos al mes</li><li>500 leads mensuales</li></ul>
         <hr>
@@ -369,6 +419,7 @@
       <article class="plan" aria-labelledby="plan-impulso">
         <h3 id="plan-impulso">Impulso</h3>
         <p class="price"><span class="amount">$499</span><span class="per">/mes</span></p>
+        <p class="price-iva">+ IVA</p>
         <p class="pdesc">Plan básico para negocios o profesionales que agendan citas.</p>
         <ul class="limits"><li>Hasta 2 vendedores</li><li>Hasta 5 proveedores en la agenda</li><li>150 créditos al mes</li><li>1,000 leads mensuales</li></ul>
         <hr>
@@ -378,6 +429,7 @@
       <article class="plan" aria-labelledby="plan-negocio">
         <h3 id="plan-negocio">Negocio</h3>
         <p class="price"><span class="amount">$1,499</span><span class="per">/mes</span></p>
+        <p class="price-iva">+ IVA</p>
         <p class="pdesc">Plan CRM para gestionar tus ventas y vendedores.</p>
         <ul class="limits"><li>Hasta 5 vendedores</li><li>Hasta 15 proveedores en la agenda</li><li>500 créditos al mes</li><li>2,000 leads mensuales</li></ul>
         <hr>
@@ -387,6 +439,7 @@
       <article class="plan" aria-labelledby="plan-empresa">
         <h3 id="plan-empresa">Empresa</h3>
         <p class="price"><span class="amount">$3,999</span><span class="per">/mes</span></p>
+        <p class="price-iva">+ IVA</p>
         <p class="pdesc">Automatización y gestión para equipos con necesidades especiales.</p>
         <ul class="limits"><li>Vendedores ilimitados</li><li>2,000 créditos al mes</li><li>3,500 leads mensuales</li></ul>
         <hr>
@@ -394,7 +447,7 @@
         <a class="btn plan-cta" href="https://agente.operativai.com.mx/registro">Contratar ahora</a>
       </article>
       </div>
-      <p class="price-note">Precios mensuales en pesos mexicanos. Los precios son netos.</p>
+      <p class="price-note">Precios mensuales en pesos mexicanos, más IVA. Al plan de $299, por ejemplo, se le suma 16% y pagas $346.84.</p>
     </div>
   </section>
 
@@ -447,7 +500,7 @@
           <a class="btn pack-cta" href="https://agente.operativai.com.mx/registro">Comprar<span class="sr-only"> 5,000 créditos</span></a>
         </div>
       </div>
-      <p class="price-note">Los precios son netos.</p>
+      <p class="price-note">Precios en pesos mexicanos, más IVA.</p>
     </div>
   </section>
 
