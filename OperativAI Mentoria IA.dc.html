@@ -60,7 +60,7 @@
       "name": "¿Cómo es el formato de la mentoría?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sesiones de diagnóstico y seguimiento sobre las tareas puntuales que definimos juntos, a tu ritmo — no un curso grabado ni clases genéricas."
+        "text": "Sesiones de una hora entre una persona de nuestro equipo y la del tuyo que opera la tarea, sobre los puntos que definimos juntos y a tu ritmo — no es un curso grabado ni clases genéricas. Al final te queda un documento con el paso a paso para repetirlo por su cuenta."
       }
     },
     {
@@ -93,6 +93,22 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No, es el paso anterior. De cada mejora puntual identificamos, con evidencia real, qué proyecto de desarrollo sí te conviene construir después."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta la mentoría?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La mentoría no va por planes: se cobra por bolsa de horas y la cotizamos según el alcance que definamos en la primera sesión, que no tiene costo. Escríbenos y lo vemos contigo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para quién no es la mentoría?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No es para ti si buscas que alguien se haga cargo y tu equipo no quiere aprender a operarlo: el entregable es justamente que puedan hacerlo solos. Si lo que necesitas es que lo construyamos y lo operemos nosotros, eso es un proyecto de desarrollo; te lo decimos en la primera sesión si ese es tu caso."
       }
     }
   ]
@@ -215,10 +231,43 @@
     </div>
   </section>
 
+  <section id="que-mejoramos" style="background:var(--bg-elev-2);border-top:1px solid var(--border);">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);">
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:56px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">02 — QUÉ MEJORAMOS</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);">Reportes, tareas repetitivas y organización</h2>
+        </div>
+        <p style="font-size:15px;line-height:1.5;color:var(--fg-muted);max-width:340px;margin:0;">Es lo que nos piden los negocios con los que trabajamos.</p>
+      </div>
+      <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+        <sc-for list="{{ mejoras }}" as="m" hint-placeholder-count="3">
+          <div style="padding:24px;background:var(--bg-elev-1);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:14px;">
+            <i data-lucide="{{ m.icon }}" aria-hidden="true" style="width:22px;height:22px;color:var(--brand-500);"></i>
+            <h3 style="font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-0.02em;margin:0;color:var(--fg);">{{ m.title }}</h3>
+            <p style="font-size:15px;line-height:1.55;color:var(--fg-muted);margin:0;">{{ m.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div class="reveal" style="margin-top:32px;padding:clamp(24px,3vw,36px);background:var(--bg-elev-1);border:1px solid var(--border);border-left:3px solid var(--brand-500);border-radius:var(--r-lg);">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--fg-soft);text-transform:uppercase;letter-spacing:0.12em;">Caso · Ferreterías en San Luis Potosí</span>
+        <p style="font-size:clamp(16px,1.8vw,18px);line-height:1.55;color:var(--fg);max-width:760px;margin:12px 0 0;">Trabajamos con ferreterías de San Luis Potosí mejorando sus flujos de trabajo: cómo sacan sus reportes, qué tareas repetitivas se pueden automatizar y cómo se organiza el día a día del mostrador.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="que-te-llevas" style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);border-top:1px solid var(--border);">
+    <div class="reveal">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">03 — QUÉ TE LLEVAS</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);max-width:820px;">Un documento para que lo hagan ustedes solos</h2>
+      <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.55;color:var(--fg-muted);max-width:720px;margin:28px 0 0;">Al final te queda un documento con el paso a paso de lo que mejoramos, escrito para que tu equipo lo repita y lo mantenga sin depender de nosotros. Las sesiones son de una hora: una persona de nuestro equipo con la persona del tuyo que opera esa tarea — no con un intermediario.</p>
+    </div>
+  </section>
+
   <section id="para-quien" style="background:var(--bg-elev-2);border-top:1px solid var(--border);">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);">
       <div class="reveal" style="margin-bottom:56px;">
-        <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">02 — PARA QUIÉN</span>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">04 — PARA QUIÉN</span>
         <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);">Pensada para el dueño de pyme, no para el equipo técnico</h2>
       </div>
       <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
@@ -244,11 +293,11 @@
 
   <section id="faq" style="max-width:1280px;margin:0 auto;padding:clamp(64px,10vw,112px) clamp(24px,6vw,96px);border-top:1px solid var(--border);">
     <div class="reveal" style="margin-bottom:48px;">
-      <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">03 — PREGUNTAS</span>
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--fg-soft);letter-spacing:0.1em;">05 — PREGUNTAS</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-0.03em;margin:12px 0 0;color:var(--fg);">Preguntas frecuentes</h2>
     </div>
     <div style="border-top:1px solid var(--border);max-width:800px;">
-      <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="5">
+      <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="7">
         <details data-faq="true" style="border-bottom:1px solid var(--border);">
           <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 0;cursor:pointer;">
             <span style="font-family:var(--font-display);font-weight:600;font-size:18px;color:var(--fg);">{{ item.q }}</span>
@@ -262,7 +311,7 @@
 
   <section id="demo" style="background:var(--brand-700);color:var(--ink-0);padding:clamp(80px,12vw,140px) clamp(24px,6vw,96px);">
     <div class="reveal" style="max-width:1280px;margin:0 auto;">
-      <span style="font-family:var(--font-mono);font-size:12px;color:rgba(246,242,234,0.5);letter-spacing:0.1em;">04 — CONTACTO</span>
+      <span style="font-family:var(--font-mono);font-size:12px;color:rgba(246,242,234,0.5);letter-spacing:0.1em;">06 — CONTACTO</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(40px,7vw,88px);font-weight:700;letter-spacing:-0.04em;line-height:0.95;margin:20px 0 40px;color:var(--ink-0);">Agenda una reunión y hacemos el <em style="font-style:italic;font-weight:400;color:var(--accent-light);">diagnóstico</em>.</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:48px;align-items:start;padding-top:32px;border-top:1px solid rgba(246,242,234,0.2);">
         <div>
@@ -398,12 +447,19 @@ class Component extends DCLogic {
         { no: '03', phase: 'Ruta de crecimiento', title: 'Vemos juntos las áreas de oportunidad', desc: 'Identificamos dónde más te podemos ayudar — atención al cliente, cobranza, cotizaciones, seguimiento a leads, inventario — y de ahí armamos, con evidencia real, el siguiente proyecto que te conviene construir.' },
         { no: '04', phase: 'Optimización de equipo', title: 'Avanzamos con los procesos de tu personal', desc: 'Una vez resuelta la tarea puntual, ayudamos a optimizar el flujo de trabajo de tu equipo alrededor de ella — mismo proceso, mejor ejecución.' }
       ],
+      mejoras: [
+        { icon: 'file-text', title: 'Reportes', desc: 'Sacar la información que ya vive en tu operación, en el formato en que la necesitas, sin tener que pedírsela a nadie.' },
+        { icon: 'repeat', title: 'Tareas repetitivas', desc: 'Lo que tu equipo repite cada día igual: capturar, pasar datos de un lado a otro, contestar lo mismo una y otra vez.' },
+        { icon: 'layout-list', title: 'Organización', desc: 'Dónde vive cada cosa y quién hace qué, para que el trabajo deje de depender de la memoria de una persona.' }
+      ],
       faqs: [
-        { q: '¿Cómo es el formato de la mentoría?', a: 'Sesiones de diagnóstico y seguimiento sobre las tareas puntuales que definimos juntos, a tu ritmo — no un curso grabado ni clases genéricas.' },
+        { q: '¿Cómo es el formato de la mentoría?', a: 'Sesiones de una hora entre una persona de nuestro equipo y la del tuyo que opera la tarea, sobre los puntos que definimos juntos y a tu ritmo — no es un curso grabado ni clases genéricas. Al final te queda un documento con el paso a paso para repetirlo por su cuenta.' },
         { q: '¿Necesito conocimientos técnicos previos?', a: 'No. La mentoría está pensada para el dueño de la pyme, no para un equipo técnico. Hablamos de tu operación, no de código.' },
         { q: '¿Solo hacen el diagnóstico o también implementan la mejora?', a: 'Ambos. Diagnosticamos la tarea puntual y te acompañamos a implementar la mejora con IA sobre esa misma tarea.' },
         { q: '¿Qué pasa si mis tareas cambian con el tiempo?', a: 'La mentoría es continua: cada mejora puntual nos deja ver el siguiente punto de dolor, y ahí seguimos.' },
-        { q: '¿Esto reemplaza un proyecto de desarrollo más grande?', a: 'No, es el paso anterior. De cada mejora puntual identificamos, con evidencia real, qué proyecto de desarrollo sí te conviene construir después.' }
+        { q: '¿Esto reemplaza un proyecto de desarrollo más grande?', a: 'No, es el paso anterior. De cada mejora puntual identificamos, con evidencia real, qué proyecto de desarrollo sí te conviene construir después.' },
+        { q: '¿Cuánto cuesta la mentoría?', a: 'La mentoría no va por planes: se cobra por bolsa de horas y la cotizamos según el alcance que definamos en la primera sesión, que no tiene costo. Escríbenos y lo vemos contigo.' },
+        { q: '¿Para quién no es la mentoría?', a: 'No es para ti si buscas que alguien se haga cargo y tu equipo no quiere aprender a operarlo: el entregable es justamente que puedan hacerlo solos. Si lo que necesitas es que lo construyamos y lo operemos nosotros, eso es un proyecto de desarrollo; te lo decimos en la primera sesión si ese es tu caso.' }
       ]
     };
   }
