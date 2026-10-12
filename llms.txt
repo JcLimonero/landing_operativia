@@ -23,6 +23,7 @@ Todos los planes son mensuales, en pesos mexicanos (MXN). Los precios no incluye
 - Negocio: $1,499 al mes. Plan CRM para gestionar ventas y vendedores. Hasta 5 vendedores, hasta 15 proveedores en la agenda, 500 créditos al mes y 2,000 leads mensuales. Incluye agente de IA, gestión de vendedores, herramientas del agente, CRM de campo y calendario.
 - Empresa: $3,999 al mes. Automatización y gestión para equipos con necesidades especiales. Vendedores ilimitados, 2,000 créditos al mes y 3,500 leads mensuales. Incluye agente de IA, gestión de vendedores, herramientas del agente, CRM de campo y calendario.
 - Créditos adicionales: paquetes de 100 ($29.99), 500 ($129.99), 1,000 ($239.99) y 5,000 ($999.99) créditos. Los créditos se utilizan al ejecutar herramientas y funciones del agente de IA; los paquetes adicionales se suman al saldo y no vencen.
+- Mentoría de IA: no va por planes; se cobra por bolsa de horas y se cotiza según el alcance, con sesiones de una hora.
 - Detalle y contratación: https://www.operativai.com.mx/precios
 
 ## Datos clave
