@@ -32,9 +32,12 @@ Tech, que son otras empresas del dueño, y **no se usa para posicionar OperativA
 
 ## Estado al 14 de octubre de 2026
 
-- **Precios publicados:** los cuatro planes y los paquetes de créditos (#7); el IVA se declara como
-  que **se suma**, no como «netos» (#8); el FAQ responde los términos en vez de remitir al
-  diagnóstico (#9).
+- **Precios publicados:** los cuatro planes y los paquetes de créditos (#7); el FAQ responde los
+  términos en vez de remitir al diagnóstico (#9).
+- **IVA (corregido el 16 de octubre de 2026):** los precios **ya lo incluyen**. El #8 lo había
+  publicado como que se sumaba, siguiendo lo que el dueño confirmó entonces; al corregirse el dato
+  se invirtió en `/precios`, la landing, `llms.txt`, el `valueAddedTaxIncluded` del structured data
+  y el apartado 4 de las condiciones.
 - **Mentoría:** la página ya dice qué se mejora, con quién y qué te llevas (#10).
 - **Navegación:** menú hamburguesa para móvil (#5) y enlace a la app del agente en el menú y el pie (#4).
 - **Legal:** condiciones del servicio publicadas (#2) y responsable del tratamiento identificado (#3).
