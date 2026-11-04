@@ -1,5 +1,6 @@
 /* ============================================================================
    Orvia — tokens de marca (PROVISIONALES)
+   Paleta: grafito + lima
    ----------------------------------------------------------------------------
    Se carga DESPUÉS de las hojas del design system y solo redefine la rampa de
    marca, el acento y la tipografía de display. La estructura, el espaciado y
@@ -8,41 +9,60 @@
    Por qué existe este archivo: la landing heredaba la rampa azul de Dealer
    Solutions (--brand-500: #1E5BB8). Orvia es otra empresa y no se posiciona
    sobre la experiencia de Dealer, así que la marca tenía que dejar de ser
-   prestada. Separarlo en un archivo propio mantiene el design system intacto
-   y hace el cambio reversible.
+   prestada. Separarlo mantiene el design system intacto y el cambio reversible.
 
-   PROVISIONAL: esta paleta la elegí yo a falta de identidad formal de Orvia.
-   Cuando exista la definitiva, se reemplazan los valores de este archivo y
-   nada más. Ver docs/RUNBOOK-rebrand-orvia.md, decisión 0.3.
+   CÓMO SE REPARTE "GRAFITO + LIMA" — y por qué así y no al revés.
+   La rampa --brand-* no pinta solo botones: el sitio la usa unas 70 veces como
+   COLOR DE TEXTO (enlaces, la palabra de acento de cada titular, --info). Si se
+   le mete el lima, esos 70 textos tienen que oscurecerse para pasar contraste
+   sobre blanco, y la página entera se va a verde oliva — además de acercarse al
+   verde de WhatsApp, que es justo lo que no queremos vendiendo agentes de
+   WhatsApp. Por eso:
+   - --brand-* es la rampa de GRAFITO. Gobierna superficies y textos de acento.
+   - El LIMA vive en --accent-light, que el design system usa sobre fondos
+     oscuros. Ahí contrasta de sobra y es donde la marca de verdad se ve.
+   - El lima brillante NO se usa nunca como texto sobre fondo claro: #A3E635
+     sobre blanco no pasa contraste. Solo sobre oscuro, y en adornos.
+
+   El costo asumido: sobre fondo claro la palabra de acento de los titulares
+   queda en grafito, sin color. Es el precio de esta paleta y es deliberado.
+
+   PROVISIONAL: paleta elegida a falta de identidad formal de Orvia. Cuando
+   exista la definitiva se reemplazan estos valores y nada más.
+   Ver docs/RUNBOOK-rebrand-orvia.md, decisión 0.3.
    ========================================================================== */
 
 :root {
-  /* --- Rampa de marca: violeta ------------------------------------------- */
-  --brand-50:  #F3F0FF;
-  --brand-100: #E6DFFF;
-  --brand-200: #CCBFFF;
-  --brand-300: #AC97FF;
-  --brand-400: #8B6DFA;
-  --brand-500: #6E45EC;  /* primario */
-  --brand-600: #5932C4;  /* texto de marca sobre fondo claro */
-  --brand-700: #44269A;
-  --brand-800: #2F1A6C;
-  --brand-900: #1C0F41;
+  /* --- Rampa de marca: grafito ------------------------------------------- */
+  --brand-50:  #F8FAFC;
+  --brand-100: #F1F5F9;
+  --brand-200: #E2E8F0;
+  --brand-300: #CBD5E1;
+  --brand-400: #475569;
+  --brand-500: #1F2937;  /* primario y texto de acento sobre claro */
+  --brand-600: #111827;
+  --brand-700: #0B1220;  /* el design system deriva --bg-dark de aquí */
+  --brand-800: #060B14;
+  --brand-900: #030712;
 
-  /* --- Acento: ámbar ------------------------------------------------------ */
-  --accent:       #F2A516;
-  --accent-light: #FFC65C;
-  --accent-soft:  #FFF1D6;
+  /* --- Acento: lima, y solo sobre oscuro ---------------------------------- */
+  --accent:       #A3E635;
+  --accent-light: #A3E635;  /* el design system lo usa en secciones oscuras */
+  --accent-soft:  #ECFCCB;
+
+  /* --- Superficies oscuras ------------------------------------------------ */
+  --bg-dark:    #0B1220;
+  --grad-brand: linear-gradient(135deg, #1F2937 0%, #0B1220 100%);
 
   /* --- Tokens que el design system define con el azul en duro ------------- */
-  --border-brand: rgba(110, 69, 236, 0.35);
-  --ring-brand:   0 0 0 3px rgba(110, 69, 236, 0.18);
-  --grad-card:    linear-gradient(180deg, rgba(110, 69, 236, 0.03) 0%, rgba(110, 69, 236, 0) 100%);
+  --border-brand: rgba(31, 41, 55, 0.28);
+  --grad-card:    linear-gradient(180deg, rgba(31, 41, 55, 0.03) 0%, rgba(31, 41, 55, 0) 100%);
+  /* El anillo de foco sí va en lima: es el único sitio donde el acento tiene
+     que saltar sobre fondo claro, y como es un halo y no texto, no aplica la
+     regla de contraste de texto. */
+  --ring-brand:   0 0 0 3px rgba(163, 230, 53, 0.45);
 
   /* --- Tipografía --------------------------------------------------------- */
   /* Display con más carácter; el cuerpo sigue en Geist, que ya se carga. */
   --font-display: 'Outfit', 'Geist', system-ui, sans-serif;
 }
-
-/* Outfit es geométrica y de trazo más abierto que Geist: a tamaños grandes
-   se nota, a tamaños de cuerpo no. Por eso solo cambia el display. */
