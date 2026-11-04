@@ -68,7 +68,7 @@
     var launcher = document.createElement('button');
     launcher.type = 'button';
     launcher.className = 'ai-launcher';
-    launcher.setAttribute('aria-label', 'Abrir el asistente de IA de OperativAI');
+    launcher.setAttribute('aria-label', 'Abrir el asistente de IA de Orvia');
     launcher.setAttribute('aria-expanded', 'false');
     launcher.setAttribute('aria-haspopup', 'dialog');
     launcher.innerHTML = ICON_CHAT + '<span>Asistente</span>';
@@ -81,11 +81,11 @@
     dialog.className = 'ai-dialog ai-hidden';
     dialog.setAttribute('role', 'dialog');
     dialog.setAttribute('aria-modal', 'true');
-    dialog.setAttribute('aria-label', 'Asistente de IA de OperativAI');
+    dialog.setAttribute('aria-label', 'Asistente de IA de Orvia');
     dialog.innerHTML =
       '<div class="ai-head">' +
         '<div class="ai-head-text">' +
-          '<div class="ai-head-title"><span class="ai-dot" aria-hidden="true"></span>Asistente OperativAI</div>' +
+          '<div class="ai-head-title"><span class="ai-dot" aria-hidden="true"></span>Asistente Orvia</div>' +
           '<div class="ai-head-sub">Te contesta nuestro agente de IA</div>' +
         '</div>' +
         '<a class="ai-wa" href="' + WA_URL + '" target="_blank" rel="noopener" aria-label="Continuar en WhatsApp">' + ICON_WA + '<span>WhatsApp</span></a>' +
@@ -93,7 +93,7 @@
       '</div>' +
       '<div class="ai-body">' +
         '<div class="ai-loading">Cargando el asistente…</div>' +
-        '<iframe class="ai-frame" title="Chat con el asistente de IA de OperativAI" allow="clipboard-write; microphone" referrerpolicy="strict-origin-when-cross-origin"></iframe>' +
+        '<iframe class="ai-frame" title="Chat con el asistente de IA de Orvia" allow="clipboard-write; microphone" referrerpolicy="strict-origin-when-cross-origin"></iframe>' +
       '</div>';
 
     document.body.appendChild(launcher);

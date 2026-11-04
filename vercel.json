@@ -4,15 +4,15 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/OperativAI Landing.dc.html"
+      "destination": "/Orvia Landing.dc.html"
     },
     {
       "source": "/agente-whatsapp",
-      "destination": "/OperativAI Agente WhatsApp.dc.html"
+      "destination": "/Orvia Agente WhatsApp.dc.html"
     },
     {
       "source": "/mentoria-ia",
-      "destination": "/OperativAI Mentoria IA.dc.html"
+      "destination": "/Orvia Mentoria IA.dc.html"
     },
     {
       "source": "/privacidad",
@@ -44,7 +44,33 @@
           "value": "operativai.com.mx"
         }
       ],
-      "destination": "https://www.operativai.com.mx/$1",
+      "destination": "https://www.orvia.tech/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.operativai.com.mx"
+        }
+      ],
+      "destination": "https://www.orvia.tech/$1",
+      "permanent": true
+    },
+    {
+      "source": "/Orvia(.*)Landing.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Orvia(.*)Agente(.*)WhatsApp.dc.html",
+      "destination": "/agente-whatsapp",
+      "permanent": true
+    },
+    {
+      "source": "/Orvia(.*)Mentoria(.*)IA.dc.html",
+      "destination": "/mentoria-ia",
       "permanent": true
     },
     {

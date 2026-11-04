@@ -1,0 +1,48 @@
+/* ============================================================================
+   Orvia — tokens de marca (PROVISIONALES)
+   ----------------------------------------------------------------------------
+   Se carga DESPUÉS de las hojas del design system y solo redefine la rampa de
+   marca, el acento y la tipografía de display. La estructura, el espaciado y
+   los componentes siguen viniendo del design system.
+
+   Por qué existe este archivo: la landing heredaba la rampa azul de Dealer
+   Solutions (--brand-500: #1E5BB8). Orvia es otra empresa y no se posiciona
+   sobre la experiencia de Dealer, así que la marca tenía que dejar de ser
+   prestada. Separarlo en un archivo propio mantiene el design system intacto
+   y hace el cambio reversible.
+
+   PROVISIONAL: esta paleta la elegí yo a falta de identidad formal de Orvia.
+   Cuando exista la definitiva, se reemplazan los valores de este archivo y
+   nada más. Ver docs/RUNBOOK-rebrand-orvia.md, decisión 0.3.
+   ========================================================================== */
+
+:root {
+  /* --- Rampa de marca: violeta ------------------------------------------- */
+  --brand-50:  #F3F0FF;
+  --brand-100: #E6DFFF;
+  --brand-200: #CCBFFF;
+  --brand-300: #AC97FF;
+  --brand-400: #8B6DFA;
+  --brand-500: #6E45EC;  /* primario */
+  --brand-600: #5932C4;  /* texto de marca sobre fondo claro */
+  --brand-700: #44269A;
+  --brand-800: #2F1A6C;
+  --brand-900: #1C0F41;
+
+  /* --- Acento: ámbar ------------------------------------------------------ */
+  --accent:       #F2A516;
+  --accent-light: #FFC65C;
+  --accent-soft:  #FFF1D6;
+
+  /* --- Tokens que el design system define con el azul en duro ------------- */
+  --border-brand: rgba(110, 69, 236, 0.35);
+  --ring-brand:   0 0 0 3px rgba(110, 69, 236, 0.18);
+  --grad-card:    linear-gradient(180deg, rgba(110, 69, 236, 0.03) 0%, rgba(110, 69, 236, 0) 100%);
+
+  /* --- Tipografía --------------------------------------------------------- */
+  /* Display con más carácter; el cuerpo sigue en Geist, que ya se carga. */
+  --font-display: 'Outfit', 'Geist', system-ui, sans-serif;
+}
+
+/* Outfit es geométrica y de trazo más abierto que Geist: a tamaños grandes
+   se nota, a tamaños de cuerpo no. Por eso solo cambia el display. */
