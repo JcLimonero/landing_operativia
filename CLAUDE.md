@@ -1,19 +1,19 @@
-# OperativAI — landing
+# Orvia — landing
 
-Sitio estático de OperativAI (agentes de IA para WhatsApp y mentoría de IA).
-Producción: **https://www.operativai.com.mx** (Vercel, despliega solo al mezclar en `main`).
+Sitio estático de Orvia (agentes de IA para WhatsApp y mentoría de IA).
+Producción: **https://www.orvia.tech** (Vercel, despliega solo al mezclar en `main`).
 
 **Posicionamiento:** el core son **pymes y negocios pequeños**, incluido el profesional
 individual (un asesor de seguros, por ejemplo). El sector automotriz es una
 **especialización secundaria**, no el eje: la experiencia automotriz profunda pertenece a
 Dealer Solutions y Nexus Q Tech, que son otras empresas del dueño. No apoyarse en ella
-para posicionar OperativAI.
+para posicionar Orvia.
 
 ## Lo primero que hay que entender: dos tipos de página
 
 | Tipo | Archivos | Cómo se editan |
 |---|---|---|
-| **Artboards del canvas** | `OperativAI Landing.dc.html`, `OperativAI Agente WhatsApp.dc.html`, `OperativAI Mentoria IA.dc.html` | Con cuidado, ver abajo |
+| **Artboards del canvas** | `Orvia Landing.dc.html`, `Orvia Agente WhatsApp.dc.html`, `Orvia Mentoria IA.dc.html` | Con cuidado, ver abajo |
 | **HTML normal** | `automotriz.html`, `refaccionarias.html`, `privacidad.html`, `condiciones.html`, `404.html` | Como cualquier HTML |
 
 Los `.dc.html` vienen de un canvas de diseño y tienen esta forma:
@@ -62,6 +62,7 @@ Reglas al tocarlos:
 |---|---|
 | `analytics.js` | GA4 **desactivado**: `GA_MEASUREMENT_ID` está vacío y mientras lo esté no se carga nada ni se instala cookie. Expone `window.trackLead()` y registra `contact_whatsapp` al pulsar cualquier CTA de WhatsApp. |
 | `assistant.js` | Botón flotante que abre el asistente de IA en un iframe (`https://operativai-chat-iframe.vws2rl.easypanel.host/embed`). El iframe no recibe `src` hasta la primera apertura y no se recarga después. |
+| `orvia-brand.css` | Tokens de marca de Orvia (rampa violeta, acento ámbar, `--font-display: Outfit`). Se carga justo después de las hojas del design system en todas las páginas (en los `.dc.html`, dentro del `<helmet>`). |
 | `nav-movil.js` | Menú hamburguesa en ≤790 px. Arma el panel **clonando el `<nav>` real** de cada página, así que no hay lista duplicada que mantener. |
 
 Patrón para añadir uno nuevo: un IIFE sin dependencias que inyecta su propio `<style>` y
@@ -72,7 +73,7 @@ deliberadamente, para que abrir los dos a la vez no deje la página sin scroll.
 
 ## Rutas
 
-`vercel.json` mapea rutas limpias a los archivos (`/` → `OperativAI Landing.dc.html`,
+`vercel.json` mapea rutas limpias a los archivos (`/` → `Orvia Landing.dc.html`,
 `/agente-whatsapp`, `/mentoria-ia`, `/automotriz`, `/refaccionarias`, `/privacidad`,
 `/condiciones`), redirige los archivos crudos a su ruta limpia y el apex a `www`, y
 envía cinco cabeceras de seguridad. `404.html` se sirve en las rutas desconocidas.
@@ -126,6 +127,6 @@ Las dos skills del usuario mandan y se aplican siempre:
 
 ## Pendientes fuera de este repo
 
-- **El `/embed` del chat debe añadir `https://www.operativai.com.mx` a su
+- **El `/embed` del chat debe añadir `https://www.orvia.tech` a su
   `frame-ancestors`.** Hasta entonces el asistente se ve en blanco en producción.
 - GA4 sin `GA_MEASUREMENT_ID`, y Bing Webmaster Tools sin dar de alta.

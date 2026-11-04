@@ -4,4 +4,4 @@ Allow: /
 # Imágenes sueltas del editor, no forman parte del sitio
 Disallow: /uploads/
 
-Sitemap: https://www.operativai.com.mx/sitemap.xml
+Sitemap: https://www.orvia.tech/sitemap.xml
