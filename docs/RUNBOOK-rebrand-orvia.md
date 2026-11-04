@@ -38,18 +38,17 @@ El texto visible era lo barato; lo caro fue la identidad.
 Vercel ya lo había configurado así al dar de alta los dos dominios, y replica lo que
 tenía `operativai.com.mx`. El apex `orvia.tech` redirige con 308.
 
-### 0.2 — Datos fiscales de la nueva razón social → **PENDIENTE, y es el único con filo legal**
+### 0.2 — Responsable del aviso de privacidad ✅ (4 nov 2026)
 
-`privacidad.html` sigue declarando responsable a una **persona física**:
-Fernando Ramón Parra Villanueva, con su RFC y domicilio. **No se tocó** porque el dueño
-dijo que la razón social cambia pero todavía no dio los datos. No se inventan.
+**No hubo cambio de razón social.** Sigue siendo una **persona física** operando bajo el
+nombre comercial Orvia; lo que cambió es **quién** es esa persona. El dueño aportó la
+Constancia de Situación Fiscal del nuevo titular y `privacidad.html` se actualizó con
+nombre, RFC y domicilio de esa constancia.
 
-- [ ] Razón social exacta con régimen: `___________`
-- [ ] RFC de la nueva entidad: `___________`
-- [ ] Domicilio fiscal: `___________`
-- [ ] ¿La entidad ya está constituida, o la persona física sigue operando bajo la marca
-      Orvia? **Si es lo segundo, `privacidad.html` ya está correcto** y solo hacía falta
-      el cambio de nombre comercial, que sí se hizo.
+**La CURP no se publica.** Viene en la constancia, pero la ley pide identificar al
+responsable y su domicilio, no su CURP. Es dato sensible de más y queda fuera a
+propósito. Si alguna vez se constituye una sociedad, hay que rehacer este bloque con la
+razón social, su régimen y su RFC.
 
 ### 0.3 — Identidad visual → **provisional en producción**
 
