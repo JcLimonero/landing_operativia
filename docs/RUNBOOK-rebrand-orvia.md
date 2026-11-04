@@ -1,7 +1,8 @@
 # Runbook — rebrand de OperativAI a Orvia
 
-- **Fecha:** 2026-11-03
-- **Estado:** **fases 1, 2 y 3 completadas y en producción.** Faltan las fases 4 y 5.
+- **Fecha:** 2026-11-03 · última revisión 2026-11-04
+- **Estado:** **fases 1, 2, 3 y 5 completadas y en producción.** Falta la fase 4 (los
+  servicios externos: chat, Search Console, Google Business Profile, Bing, EmailJS).
 - **Repo:** `JcLimonero/landing_operativia`
 - **Producción:** **https://www.orvia.tech**
 
@@ -75,9 +76,13 @@ Registros, todos en **DNS only** (nube gris):
 | A | `@` | `216.198.79.1` | Vercel |
 | CNAME | `www` | `cb3e8d107b31abb3.vercel-dns-017.com` | Vercel |
 | A | `agente` | `74.208.16.223` | VPS con EasyPanel |
-| A | `mail` | `207.210.229.233` | cPanel TELL IT |
-| A | `ftp` | `207.210.229.233` | cPanel TELL IT |
+| A | `mail` | `72.249.60.221` | cPanel de Orvia (`svgt448`) |
+| A | `ftp` | `72.249.60.221` | cPanel de Orvia (`svgt448`) |
+| A | `webmail` | `72.249.60.221` | acceso al correo por navegador |
+| A | `cpanel` | `72.249.60.221` | panel |
+| A | `autodiscover` | `72.249.60.221` | configuración automática de Outlook/Apple Mail |
 | MX | `@` | `mail.orvia.tech` prio 0 | correo |
+| TXT | `@` | `v=spf1 +a +mx +ip4:72.249.60.221 include:relay.mailchannels.net include:smtp.relay.serverneubox.com.mx ~all` | SPF |
 
 ### Trampa 1 — el CNAME al apex
 
@@ -183,20 +188,35 @@ varias semanas es normal y no indica que algo salió mal.
 
 ---
 
-## Fase 5 — correo ⬜
+## Fase 5 — correo ✅ en lo esencial (4 nov 2026)
 
-Decisión aparte; no bloquea el sitio. El correo de `orvia.tech` apunta al cPanel
-**TELL IT** de Neubox (`207.210.229.233` = `svgt446.serverneubox.com.mx`), el mismo de
-`operativai.com.mx`.
+**`orvia.tech` tiene su PROPIA cuenta de cPanel**, donde es el dominio principal y único,
+en **`72.249.60.221` = `svgt448.serverneubox.com.mx`**.
 
-- [ ] Dar de alta `orvia.tech` como dominio adicional **en el cPanel**. El DNS solo
-      dirige el tráfico; si el dominio no existe ahí, el correo rebota.
-- [ ] Crear los buzones
-- [ ] Registros opcionales para webmail y configuración automática:
-      `A webmail`, `A cpanel`, `A autodiscover` → `207.210.229.233`;
-      `CNAME pop` / `imap` / `smtp` → `mail.orvia.tech`
-- [ ] **SPF** antes de enviar el primer correo. Sin SPF, cae en spam desde el día uno.
+**No está en el cPanel TELL IT.** El TELL IT (`207.210.229.233` = `svgt446`) es el de
+`operativai.com.mx` y es **otro servidor**. Son cuentas y máquinas distintas del mismo
+proveedor.
+
+- [x] El dominio ya existe en su cPanel y los buzones están creados
+- [x] Registros de correo, todos a `72.249.60.221`: `mail`, `ftp`, `webmail`, `cpanel`,
+      `autodiscover`; `MX` → `mail.orvia.tech`
+- [x] **SPF** con `ip4:72.249.60.221` y los `include` de Neubox y MailChannels
+- [ ] DMARC (opcional, pero recomendable una vez que el flujo de correo sea estable)
 - [ ] Plan de transición del correo `@operativai.com.mx`: reenvío o convivencia
+
+### Trampa 4 — asumir en qué servidor vive el correo
+
+Costó **un día de correo rebotado**. El dueño mencionó "el TELL IT" y se asumió que
+`orvia.tech` era un dominio adicional de ese cPanel. No lo era. El correo quedó apuntando
+a `svgt446` cuando el buzón vivía en `svgt448`, y todo lo enviado a `@orvia.tech` rebotó
+hasta que se corrigió.
+
+> **Regla: la IP del servidor de correo se confirma en el cPanel** —barra lateral,
+> "Dirección IP compartida"— **nunca se infiere** del nombre del cPanel, del servidor de
+> otro dominio del mismo dueño, ni de la IP donde el dominio está estacionado.
+
+El síntoma, además, es silencioso del lado de quien lo configura: el DNS se ve
+perfectamente sano porque *es* sano. Lo que está mal es a qué máquina apunta.
 
 ---
 
@@ -210,6 +230,16 @@ Decisión aparte; no bloquea el sitio. El correo de `orvia.tech` apunta al cPane
 | Proxy naranja en Cloudflare | Rompe el certificado de Vercel. Todo en **DNS only** |
 | CNAME al apex en subdominios nuevos | Revisar siempre (trampa 1) |
 | Elegir paleta sobre una muestra aislada | Probar sobre la página real (trampa 3) |
+| Asumir en qué servidor vive un buzón | Confirmar la IP en el cPanel (trampa 4) |
+
+## Los dos cPanel, que no son el mismo
+
+Es la confusión que más cara salió. Son cuentas distintas en máquinas distintas:
+
+| Dominio | cPanel | Servidor |
+|---|---|---|
+| `operativai.com.mx` | **TELL IT** | `207.210.229.233` = `svgt446.serverneubox.com.mx` |
+| `orvia.tech` | el suyo propio, donde es dominio principal y único | `72.249.60.221` = `svgt448.serverneubox.com.mx` |
 
 ## Bitácora
 
@@ -217,3 +247,5 @@ Decisión aparte; no bloquea el sitio. El correo de `orvia.tech` apunta al cPane
 |---|---|
 | 2026-11-03 | Decisión del rebrand. Fase 1: zona, DNS y dominio en Vercel. |
 | 2026-11-03 | Fases 2 y 3 (PR #14): rename completo, paleta grafito + lima, 308 desde el dominio viejo. **En producción.** |
+| 2026-11-04 | Responsable del aviso de privacidad actualizado (PR #15). |
+| 2026-11-04 | Correo de `orvia.tech` corregido: apuntaba al servidor equivocado y rebotaba. Más `webmail`, `cpanel`, `autodiscover` y SPF. |

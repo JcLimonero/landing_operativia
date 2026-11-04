@@ -62,7 +62,7 @@ Reglas al tocarlos:
 |---|---|
 | `analytics.js` | GA4 **desactivado**: `GA_MEASUREMENT_ID` está vacío y mientras lo esté no se carga nada ni se instala cookie. Expone `window.trackLead()` y registra `contact_whatsapp` al pulsar cualquier CTA de WhatsApp. |
 | `assistant.js` | Botón flotante que abre el asistente de IA en un iframe (`https://operativai-chat-iframe.vws2rl.easypanel.host/embed`). El iframe no recibe `src` hasta la primera apertura y no se recarga después. |
-| `orvia-brand.css` | Tokens de marca de Orvia (rampa violeta, acento ámbar, `--font-display: Outfit`). Se carga justo después de las hojas del design system en todas las páginas (en los `.dc.html`, dentro del `<helmet>`). |
+| `orvia-brand.css` | Tokens de marca de Orvia: **grafito con acento lima**, `--font-display: Outfit`. Se carga justo después de las hojas del design system en todas las páginas (en los `.dc.html`, dentro del `<helmet>`). **La rampa `--brand-*` lleva el grafito, no el lima**, porque el sitio la usa ~70 veces como color de TEXTO: un color claro ahí obliga a oscurecerlo para pasar contraste y tiñe la página entera. El lima vive en `--accent-light`, que el design system usa sobre fondos oscuros, y nunca se usa como texto sobre claro. El archivo explica el reparto completo. |
 | `nav-movil.js` | Menú hamburguesa en ≤790 px. Arma el panel **clonando el `<nav>` real** de cada página, así que no hay lista duplicada que mantener. |
 
 Patrón para añadir uno nuevo: un IIFE sin dependencias que inyecta su propio `<style>` y
