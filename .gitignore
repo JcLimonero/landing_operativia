@@ -1,0 +1,20 @@
+# Secretos: se materializan desde el vault, nunca se versionan.
+.env
+.env.*
+.env.sh
+*.key
+*.pem
+
+# Vercel
+.vercel/
+
+# macOS
+.DS_Store
+
+# Temporales
+*.log
+node_modules/
+
+# Mapa del vault (nombres de items, sin valores) y sus respaldos
+.vault.map
+.vault.map.*
